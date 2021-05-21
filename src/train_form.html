@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ENODO Trainings</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <h1>eNODO</h1>
+      <p>We know <b>the right</b> way.</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="index.html">Strona główna</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </div>
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+      <div class="side">
+        <h2>About Me</h2>
+        <h5>Photo of me:</h5>
+        <div class="fakeimg" style="height: 200px">Image</div>
+        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        <h3>More Text</h3>
+        <p>Lorem ipsum dolor sit ame.</p>
+        <div class="fakeimg" style="height: 60px">Image</div>
+        <br />
+        <div class="fakeimg" style="height: 60px">Image</div>
+        <br />
+        <div class="fakeimg" style="height: 60px">Image</div>
+      </div>
+      <div class="main">
+        <h2>Co chciałbyś wiedzieć?</h2>
+        <h5>Sprecyzuj swoje potrzeby</h5>
+        <hr />
+        <form action="">
+          <p>Wybierz interesujące Cię tematy</p>
+          <label for="new-topic">Tematy:</label>
+          <select name="new-topic" id="new-topic">
+              <option value="Ustawianie procesu wtryskiwania">Ustawianie procesu wtryskiwania</option>
+              <option value="Symulacje wtryskiwania">Symulacje wtryskiwania</option>
+              <option value="Obsługa wtryskarek">Obsługa wtryskarek</option>
+              <option value="Materiałoznawsto tworzyw">Materiałoznawsto tworzyw</option>
+              <option value="Budowa form wtryskowych">Budowa form wtryskowych</option>
+              <option value="Budowa systemów gorąco-kanałowych">Budowa systemów gorąco-kanałowych</option>
+            </select>
+            <button id="add">Dodaj</button>
+            <button id="remove">Usuń</button>
+            <p>Wybrane tematy:</p>
+            <ul id="topics-items"></ul>
+            <p class="warning" id="warning-items"></p>
+            <p>Cena szkolenia:</p>
+            <p id=price></p>
+            <p>Czas trwania szkolenia:</p>
+            <p id=timing></p><br/>
+          <hr>
+          <p>Preferowana data szkolenia</p>
+          <label for="training_date">Wybierz datę:</label>
+          <input type="date" id="training_date" name="training_date" min="">
+          <p class="warning" id="warning-date"></p><br/>
+          <hr>
+          <p>Jak mamy się z Tobą skontaktować?</p>
+          <label for="fname">Imię:</label><br />
+          <input type="text" id="fname" name="fname" value="" /><p class="warning" id="warning-fname"></p>
+          <label for="lname">Nazwisko:</label><br />
+          <input type="text" id="lname" name="lname" value="" /><p class="warning" id="warning-lname"></p>
+          <label for="email">E-mail:</label><br />
+          <input type="text" id="email" name="email" value="" /><p class="warning" id="warning-email"></p>
+          <label for="email">Nr telefonu:</label><br />
+          <input type="phone" id="phone" name="phone" value="nieobowiązkowo" /><br /><br/>
+          <input type="submit" value="Zamów szkolenie" />
+        </form><br/>
+        <button onclick="location.href='index.html';">Powrót</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <h2>Footer</h2>
+    </div>
+  </body>
+</html>

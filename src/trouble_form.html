@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ENODO Troubleshooting</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <h1>eNODO</h1>
+      <p>We know <b>the right</b> way.</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="index.html">Strona główna</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </div>
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+      <div class="side">
+        <h2>About Me</h2>
+        <h5>Photo of me:</h5>
+        <div class="fakeimg" style="height: 200px">Image</div>
+        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        <h3>More Text</h3>
+        <p>Lorem ipsum dolor sit ame.</p>
+        <div class="fakeimg" style="height: 60px">Image</div>
+        <br />
+        <div class="fakeimg" style="height: 60px">Image</div>
+        <br />
+        <div class="fakeimg" style="height: 60px">Image</div>
+      </div>
+      <div class="main">
+        <h2>W czym możemy pomóc?</h2>
+        <h5>Sprecyzuj swoje potrzeby</h5>
+        <hr />
+        <form action="">
+          <p>Jakiego obszaru inżynierii produkcji dotyczy problem?</p><br>
+          <input
+            type="radio"
+            id="prod_dev"
+            name="issue_type"
+            value="prod_dev"
+          />
+          <label for="prod_dev">Rozwój produktu</label><br />
+          <input
+            type="radio"
+            id="prod_prep"
+            name="issue_type"
+            value="prod_prep"
+          />
+          <label for="prod_prep">Techniczne przygotowanie produkcji</label
+          ><br />
+          <input
+            type="radio"
+            id="prod_prod"
+            name="issue_type"
+            value="prod_prod"
+          />
+          <label for="prod_prep">Produkcja</label><br />
+          <input type="radio" id="other" name="issue_type" value="other" />
+          <label for="other">Inny</label><br />
+          <p class="warning" id="warning-radio"></p>
+          <br />
+          <hr>
+          <p>Opisz problem</p><br>
+          <textarea id ="descr" rows = "4" cols = "60" name = "description"></textarea><p class="warning" id="warning-descr"></p><br>
+          <hr>
+          <p>Jak mamy się z Tobą skontaktować?</p><br>
+          <label for="fname">Imię:</label><br />
+          <input type="text" id="fname" name="fname" value="" /><br />
+          <label for="lname">Nazwisko:</label><br />
+          <input type="text" id="lname" name="lname" value="" /><br />
+          <label for="email">E-mail:</label><br />
+          <input type="text" id="email" name="email" value="" /><br />
+          <label for="email">Nr telefonu:</label><br />
+          <input type="phone" id="phone" name="phone" value="nieobowiązkowe" /><br /><br/>
+          <input type="submit" value="Sprawdź nas!" />
+        </form>
+        <button onclick="location.href='index.html';">Powrót</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <h2>Footer</h2>
+    </div>
+  </body>
+</html>
