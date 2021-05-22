@@ -5,10 +5,12 @@ module.exports = {
   entry: {
     mainPage: "./src/index.js",
     formPageOne: "./src/train_form.js",
+    formPageTwo: "./src/trouble_form.js",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    // path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
+    path: __dirname + '/dist',
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),

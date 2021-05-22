@@ -1,3 +1,5 @@
+const { warningTag } = require("./arrangeTopics");
+
 const ITEMS_KEY = "ITEMS";
 const DATE_TAG_ID = "training_date";
 const DATE_WARN_ID = "warning-date";
@@ -8,17 +10,7 @@ const SURNAME_WARN_ID = "warning-lname";
 const EMAIL_ID = "email";
 const EMAIL_WARN_ID = "warning-email";
 const PHONE_ID = "phone";
-const RADIO_DEV_ID = "prod_dev";
-const RADIO_PREP_ID = "prod_prep";
-const RADIO_PROD_ID = "prod_prod";
-const RADIO_OTHER_ID = "other";
-const RADIO_WARN_ID = "warning-radio";
-const DESCR_ID = "descr";
-const DESCR_WARN_ID = "warning-descr";
-
 const WARNING_MESSAGE = "To pole jest obowiązkowe!";
-const RADIO_CONDITION = devRadio || prepRadio || prodRadio || otherRadio;
-const RADIO_ID = "radio";
 
 const dateTag = document.getElementById(DATE_TAG_ID);
 const dateWarning = document.getElementById(DATE_WARN_ID);
@@ -29,21 +21,12 @@ const lnameWarning = document.getElementById(SURNAME_WARN_ID);
 const emailTag = document.getElementById(EMAIL_ID);
 const phoneTag = document.getElementById(PHONE_ID);
 const emailWarning = document.getElementById(EMAIL_WARN_ID);
-const descrTag = document.getElementById(DESCR_ID);
-const descrWarning = document.getElementById(DESCR_WARN_ID);
-const devRadio = document.getElementById(RADIO_DEV_ID);
-const prepRadio = document.getElementById(RADIO_PREP_ID);
-const prodRadio = document.getElementById(RADIO_PROD_ID);
-const otherRadio = document.getElementById(RADIO_OTHER_ID);
-const radioWarning = document.getElementById(RADIO_WARN_ID);
 
 const firstName = localStorage.getItem(FIRST_NAME_ID);
 const lastName = localStorage.getItem(SURNAME_ID);
 const date = localStorage.getItem(DATE_TAG_ID);
 const email = localStorage.getItem(EMAIL_ID);
 const phone = localStorage.getItem(PHONE_ID);
-const description = localStorage.getItem(DESCR_ID);
-const radio = localStorage.getItem(RADIO_ID);
 
 function validateDate() {
   if (dateTag.value === "") {
@@ -82,30 +65,7 @@ function validatePhone() {
     ? localStorage.removeItem(PHONE_ID)
     : localStorage.setItem(PHONE_ID, phoneTag.value);
 }
-function validateDescription() {
-  if (descrTag.innerHTML === "") {
-    descrWarning.innerHTML = WARNING_MESSAGE;
-  } else {
-    localStorage.setItem(DESCR_ID, descrTag.innerHTML);
-    descrWarning.innerHTML = "";
-  }
-}
-function validateRadio() {
-  if (!RADIO_CONDITION) {
-    radioWarning.innerHTML = WARNING_MESSAGE;
-  } else {
-    if (devRadio.value) {
-      localStorage.setItem(RADIO_ID, devRadio.value);
-    } else if (prepRadio.value) {
-      localStorage.setItem(RADIO_ID, prepRadio.value);
-    } else if (prodRadio.value) {
-      localStorage.setItem(RADIO_ID, prodRadio.value);
-    } else {
-      localStorage.setItem(RADIO_ID, otherRadio.value);
-    }
-    emailWarning.innerHTML = "";
-  }
-}
+
 function clearForm() {
   localStorage.removeItem(SURNAME_ID);
   localStorage.removeItem(FIRST_NAME_ID);
@@ -120,11 +80,13 @@ function submitData() {
     dateWarning.innerHTML ||
     fnameWarning.innerHTML ||
     lnameWarning.innerHTML ||
-    emailWarning.innerHTML
+    emailWarning.innerHTML ||
+    warningTag.innerHTML
   ) {
-    clearForm();
-  } else {
     alert("W formularzu są błędy!");
+    
+  } else {
+    clearForm();
   }
 }
 module.exports = {
@@ -133,8 +95,6 @@ module.exports = {
   validateLastName,
   validateEmail,
   validatePhone,
-  validateDescription,
-  validateRadio,
   submitData,
   clearForm,
   firstName,
@@ -147,11 +107,4 @@ module.exports = {
   email,
   phoneTag,
   phone,
-  descrTag,
-  description,
-  devRadio,
-  prepRadio,
-  prodRadio,
-  otherRadio,
-  radio,
 };

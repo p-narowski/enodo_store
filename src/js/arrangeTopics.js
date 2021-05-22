@@ -60,5 +60,6 @@ module.exports = {
   removeItem,
   calculatePrice,
   calculateTime,
-  checkList
+  checkList,
+  warningTag
 };
