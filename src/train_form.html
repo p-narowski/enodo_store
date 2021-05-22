@@ -36,11 +36,11 @@
         <div class="fakeimg" style="height: 60px">Image</div>
       </div>
       <div class="main">
-        <h2>Co chciałbyś wiedzieć?</h2>
+        <h2>Czego chciałbyś się dowiedzieć?</h2>
         <h5>Sprecyzuj swoje potrzeby</h5>
         <hr />
         <form action="">
-          <p>Wybierz interesujące Cię tematy</p>
+          <p>Wybierz interesujące Cię tematy szkolenia</p>
           <label for="new-topic">Tematy:</label>
           <select name="new-topic" id="new-topic">
               <option value="Ustawianie procesu wtryskiwania">Ustawianie procesu wtryskiwania</option>
@@ -62,7 +62,7 @@
           <hr>
           <p>Preferowana data szkolenia</p>
           <label for="training_date">Wybierz datę:</label>
-          <input type="date" id="training_date" name="training_date" min="">
+          <input type="date" id="training_date" name="training_date">
           <p class="warning" id="warning-date"></p><br/>
           <hr>
           <p>Jak mamy się z Tobą skontaktować?</p>
@@ -73,10 +73,10 @@
           <label for="email">E-mail:</label><br />
           <input type="text" id="email" name="email" value="" /><p class="warning" id="warning-email"></p>
           <label for="email">Nr telefonu:</label><br />
-          <input type="phone" id="phone" name="phone" value="nieobowiązkowo" /><br /><br/>
-          <input type="submit" value="Zamów szkolenie" />
+          <input type="phone" id="phone" name="phone" value="" /><br /><br/>
+          <input type="submit" id="submit" value="Zamów szkolenie" />
         </form><br/>
-        <button onclick="location.href='index.html';">Powrót</button>
+        <button id="return" onclick="location.href='index.html';">Powrót</button>
     </div>
 
     <!-- Footer -->

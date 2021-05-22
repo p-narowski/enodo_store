@@ -2,10 +2,13 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    mainPage: "./src/index.js",
+    formPageOne: "./src/train_form.js",
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].js",
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
@@ -17,14 +20,14 @@ module.exports = {
       template: "./src/index.html",
     }),
     new HtmlWebpackPlugin({
-      template: './src/train_form.html',
-      filename: 'train_form.html'
+      template: "./src/train_form.html",
+      filename: "train_form.html",
     }),
     new HtmlWebpackPlugin({
-      template: './src/trouble_form.html',
-      filename: 'trouble_form.html'
+      template: "./src/trouble_form.html",
+      filename: "trouble_form.html",
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
   ],
   module: {
     rules: [
@@ -55,5 +58,5 @@ module.exports = {
       },
     ],
   },
-  devtool: 'eval-source-map'
+  devtool: "eval-source-map",
 };
