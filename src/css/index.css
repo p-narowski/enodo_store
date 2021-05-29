@@ -7,11 +7,11 @@ body {
   font-family: Arial;
   margin: 0;
 }
-img{
-    width: inherit;
-    height: inherit;
-    padding-bottom: 10px;
-    object-fit: cover
+img {
+  width: inherit;
+  height: inherit;
+  padding-bottom: 10px;
+  object-fit: cover;
 }
 
 /* Header/logo Title */
@@ -62,11 +62,18 @@ img{
   background-color: white;
   padding: 20px;
 }
-#price, #timing{
+/* Single column */
+.single {
+  flex: 100%;
+  background-color: white;
+  padding: 20px;
+}
+#price,
+#timing {
   /* color: #1abc9c; */
   font-weight: bold;
 }
-.warning{
+.warning {
   color: red;
   font-weight: bold;
   font-size: small;
@@ -76,12 +83,10 @@ img{
   background-color: #aaa;
   width: 100%;
   padding: 5px;
-  
 }
 
 /* Footer */
 .footer {
-  
   padding: 20px;
   text-align: center;
   background: #ddd;
@@ -94,4 +99,78 @@ img{
   .navbar {
     flex-direction: column;
   }
+}
+.form-container {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.form-container * {
+  box-sizing: border-box;
+}
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner {
+  padding: 0 8px;
+  justify-content: space-between; 
+}
+
+.flex-outer > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 8px;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner {
+  flex: 1 0 220px
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type="checkbox"]),
+.flex-outer li textarea {
+  padding: 15px;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border-radius: 2px;
+}
+
+.flex-inner li {
+  width: 250px;
 }

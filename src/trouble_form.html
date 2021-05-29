@@ -22,7 +22,7 @@
 
     <!-- The flexible grid (content) -->
     <div class="row">
-      <div class="side">
+      <!-- <div class="side">
         <h2>About Me</h2>
         <h5>Photo of me:</h5>
         <div class="fakeimg" style="height: 200px">Image</div>
@@ -34,55 +34,80 @@
         <div class="fakeimg" style="height: 60px">Image</div>
         <br />
         <div class="fakeimg" style="height: 60px">Image</div>
-      </div>
-      <div class="main">
+      </div> -->
+      <div class="single">
         <h2>W czym możemy pomóc?</h2>
         <h5>Sprecyzuj swoje potrzeby</h5>
         <hr />
+        <div class="form-container">
         <form action="">
+          <ul class="flex-outer">
+            <li>
           <p>Jakiego obszaru inżynierii produkcji dotyczy problem?</p>
+          </li><li>
+          <ul class="flex-inner">
+            <li>
           <input
             type="radio"
             id="prod_dev"
             name="issue_type"
             value="prod_dev"
-          />
-          <label for="prod_dev">Rozwój produktu</label><br />
+          /></br>
+          <label for="prod_dev">Rozwój produktu</label>
+        </li>
+        <li>
           <input
             type="radio"
             id="prod_prep"
             name="issue_type"
             value="prod_prep"
-          />
-          <label for="prod_prep">Techniczne przygotowanie produkcji</label
-          ><br />
+          /></br>
+          <label for="prod_prep">Przygotowanie produkcji</label
+          ></li>
+          <li>
           <input
             type="radio"
             id="prod_prod"
             name="issue_type"
             value="prod_prod"
-          />
-          <label for="prod_prep">Produkcja</label><br />
-          <input type="radio" id="other" name="issue_type" value="other" />
-          <label for="other">Inny</label><br />
+          /></br>
+          <label for="prod_prep">Produkcja</label></li>
+          <li>
+          <input type="radio" id="other" name="issue_type" value="other" /></br>
+          <label for="other">Inny</label></li></ul></li></br>
           <p class="warning" id="warning-radio"></p>
-          <br />
-          <hr>
-          <p>Opisz problem</p>
-          <textarea id ="descr" rows = "4" cols = "60" name = "description"></textarea><p class="warning" id="warning-descr"></p><br>
-          <hr>
-          <p>Jak mamy się z Tobą skontaktować?</p>
-          <label for="fname2">Imię:</label><br />
-          <input type="text" id="fname2" name="fname2" value="" /><p class="warning" id="warning-fname2"></p>
-          <label for="lname2">Nazwisko:</label><br />
-          <input type="text" id="lname2" name="lname2" value="" /><p class="warning" id="warning-lname2"></p>
-          <label for="email2">E-mail:</label><br />
-          <input type="text" id="email2" name="email2" value="" /><p class="warning" id="warning-email2"></p>
-          <label for="phone2">Nr telefonu:</label><br />
-          <input type="text" id="phone2" name="phone2" value="" /><br /><br/>
-          <input type="submit" id="submit2" value="Sprawdź nas!" />
-        </form><br/>
-        <button id="return2" onclick="location.href='index.html';">Powrót</button>
+          </li>
+          
+        
+          <hr />
+          <li>
+          <p>Opisz problem</p></li>
+          <li><textarea id="descr" rows="4" cols="60" name="description"></textarea></li>
+          <li><p class="warning" id="warning-descr"></p>
+        </li>
+          
+          <hr />
+          <li><p>Jak mamy się z Tobą skontaktować?</p></li>
+          <li><label for="fname2">Imię:</label></li>
+          <li><input type="text" id="fname2" name="fname2" value="" /></li>
+          <li><p class="warning" id="warning-fname2"></p></li>
+          <li><label for="lname2">Nazwisko:</label><br /></li>
+            <li><input type="text" id="lname2" name="lname2" value="" /></li>
+          <li><p class="warning" id="warning-lname2"></p></li>
+          <li><label for="email2">E-mail:</label><br /></li>
+            <li><input type="text" id="email2" name="email2" value="" /></li>
+          <li></li><p class="warning" id="warning-email2"></p></li>
+          <li><label for="phone2">Nr telefonu:</label></li>
+            <li><input type="text" id="phone2" name="phone2" value=""> </li>
+         <li> <input type="submit" id="submit2" value="Sprawdź nas!"></li>
+        </ul>
+        </form>
+      </div>
+        <br />
+        <button id="return2" onclick="location.href='index.html';">
+          Powrót
+        </button>
+      </div>
     </div>
 
     <!-- Footer -->
