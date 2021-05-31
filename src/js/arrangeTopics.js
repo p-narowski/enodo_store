@@ -23,7 +23,7 @@ function addItem() {
     : (items = [...items, newItemInput.value]);
   const stringifiedItems = JSON.stringify(items);
   localStorage.setItem(ITEMS_KEY, stringifiedItems);
-  newItemInput.value = "";
+  // newItemInput.value = "";
   updateItems();
 }
 function removeFromArray(array, value) {
@@ -35,7 +35,7 @@ function removeItem() {
   changedItems = removeFromArray(items, newItemInput.value);
   const stringifiedItems = JSON.stringify(changedItems);
   localStorage.setItem(ITEMS_KEY, stringifiedItems);
-  newItemInput.value = "";
+  // newItemInput.value = "";
   updateItems();
 }
 function updateItems() {
@@ -61,5 +61,6 @@ module.exports = {
   calculatePrice,
   calculateTime,
   checkList,
-  warningTag
+  warningTag,
+  itemsListElement
 };

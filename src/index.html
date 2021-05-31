@@ -11,24 +11,30 @@
       <h1>eNODO</h1>
       <p>We know <b>the right</b> way.</p>
     </div>
-
     <!-- Navigation Bar -->
     <div class="navbar">
-      <a href="index.html">Strona główna</a>
-      <a href="#">Link</a>
-      <a href="#">Link</a>
-      <a href="#">Link</a>
+      <a href="#home" id="go-home">Strona główna</a>
+      <a href="#services">Usługi</a>
+      <a href="#pricelist">Cennik</a>
+      <a href="#how_to_hire">Jak nas zatrudnić?</a>
+      <a href="#links">Nasze projekty</a>
+      <a href="#contact" id="contact">Kontakt</a>
     </div>
-
     <!-- The flexible grid (content) -->
     <div class="row">
       <div class="side">
         <h2>O NAS</h2>
         <h5>Drużyna Ekspertów eNodo:</h5>
-        <div class="fakeimg" style="height: 200px"><img src="./assets/img/team.jpg" alt="THE E-TEAM"></div>
-        <p>Oferujemy profesjonalne doradztwo. Jesteśmy grupą inżynierów z wieloletnim doświadczeniem w branży przetwórstwa materiałów polimerowych.</p>
+        <div class="fakeimg" style="height: 200px">
+          <img src="./assets/img/team.jpg" alt="THE E-TEAM" />
+        </div>
+        <p>
+          Oferujemy profesjonalne doradztwo. Jesteśmy grupą inżynierów z
+          wieloletnim doświadczeniem w branży przetwórstwa materiałów
+          polimerowych.
+        </p>
         <h3>Referencje</h3>
-        <p>Poznaj bliżej niektóre z naszych projektów</p>
+        <p>Poznaj bliżej niektóre z naszych sukcesów</p>
         <div class="fakeimg" style="height: 60px">Image</div>
         <br />
         <div class="fakeimg" style="height: 60px">Image</div>
@@ -36,33 +42,178 @@
         <div class="fakeimg" style="height: 60px">Image</div>
       </div>
       <div class="main">
-        <h2>POMAGAMY</h2>
-        <h5>Title description, Dec 7, 2017</h5>
-        <div class="fakeimg" style="height: 200px" onclick="location.href='trouble_form.html';"><img src="./assets/img/support.jpg" alt="SUPPORT"></div>
-        <p>Some text..</p>
-        <p>
-          Sunt in culpa qui officia deserunt mollit anim id est laborum
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco.
-        </p>
-        <br />
-        <h2>EDUKUJEMY</h2>
-        <h5>Title description, Sep 2, 2017</h5>
-        <div class="fakeimg" style="height: 200px" onclick="location.href='train_form.html';"><img src="./assets/img/classroom.jpg" alt="SUPPORT"></div>
-        <p>Some text..</p>
-        <p>
-          Sunt in culpa qui officia deserunt mollit anim id est laborum
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco.
-        </p>
+        <!-- Home section -->
+        <section id="home">
+          <h2>POMAGAMY</h2>
+          <h5>Title description, Dec 7, 2017</h5>
+          <div class="fakeimg" style="height: 200px" id="support">
+            <img src="./assets/img/support.jpg" alt="SUPPORT" />
+          </div>
+          <p>Some text..</p>
+          <p>
+            Sunt in culpa qui officia deserunt mollit anim id est laborum
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco.
+          </p>
+          <br />
+          <h2>EDUKUJEMY</h2>
+          <h5>Title description, Sep 2, 2017</h5>
+          <div class="fakeimg" style="height: 200px" id="training">
+            <img src="./assets/img/classroom.jpg" alt="SUPPORT" />
+          </div>
+          <p>Some text..</p>
+          <p>
+            Sunt in culpa qui officia deserunt mollit anim id est laborum
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco.
+          </p>
+        </section>
+        <!-- Hidden form 1 -->
+        <section class="hidden" id="trouble-form">
+          <h2>W czym możemy pomóc?</h2>
+          <h5>Sprecyzuj swoje potrzeby</h5>
+          <hr />
+          <form action="">
+            <p>Jakiego obszaru inżynierii produkcji dotyczy problem?</p>
+            <ul class="radio-input">
+              <li>
+                <input
+                  type="radio"
+                  id="prod_dev"
+                  name="issue_type"
+                  value="prod_dev"
+                />
+                <label for="prod_dev">Rozwój produktu</label>
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  id="prod_prep"
+                  name="issue_type"
+                  value="prod_prep"
+                />
+                <label for="prod_prep">Przygotowanie produkcji</label>
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  id="prod_prod"
+                  name="issue_type"
+                  value="prod_prod"
+                />
+                <label for="prod_prep">Produkcja</label>
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  id="other"
+                  name="issue_type"
+                  value="other"
+                />
+                <label for="other">Inny</label>
+              </li>
+            </ul>
+            <p class="warning" id="warning-radio"></p>
+            <hr />
+            <p>Opisz problem</p>
+            <textarea id="descr" rows="6" name="description"></textarea>
+            <p class="warning" id="warning-descr"></p>
+            <hr />
+            <p>Jak mamy się z Tobą skontaktować?</p>
+            <label for="fname2">Imię:</label><br />
+            <input type="text" id="fname2" name="fname2" value="" />
+            <p class="warning" id="warning-fname2"></p>
+            <label for="lname2">Nazwisko:</label><br />
+            <input type="text" id="lname2" name="lname2" value="" />
+            <p class="warning" id="warning-lname2"></p>
+            <label for="email2">E-mail:</label><br />
+            <input type="text" id="email2" name="email2" value="" />
+            <p class="warning" id="warning-email2"></p>
+            <label for="phone2">Nr telefonu:</label><br />
+            <input type="text" id="phone2" name="phone2" value="" /><br /><br />
+            <button type="submit" id="submit2">Sprawdź nas!</button>
+          </form>
+          <br />
+          <button id="return2" onclick="location.href='index.html';">
+            Wyczyść dane i wróć
+          </button>
+        </section>
+        <!-- Hidden form 2 -->
+        <section class="hidden" id="trainings-form">
+          <h2>Czego chciałbyś się dowiedzieć?</h2>
+          <h5>Sprecyzuj swoje potrzeby</h5>
+          <hr />
+          <form action="">
+            <p>Wybierz interesujące Cię tematy szkolenia</p>
+            <label for="new-topic">Tematy:</label>
+            <select name="new-topic" id="new-topic">
+              <option value="Ustawianie procesu wtryskiwania">
+                Ustawianie procesu wtryskiwania
+              </option>
+              <option value="Symulacje wtryskiwania">
+                Symulacje wtryskiwania
+              </option>
+              <option value="Obsługa wtryskarek">Obsługa wtryskarek</option>
+              <option value="Materiałoznawsto tworzyw">
+                Materiałoznawsto tworzyw
+              </option>
+              <option value="Budowa form wtryskowych">
+                Budowa form wtryskowych
+              </option>
+              <option value="Budowa systemów gorąco-kanałowych">
+                Budowa systemów gorąco-kanałowych
+              </option>
+            </select>
+            <button type="button" id="add">Dodaj</button>
+            <button type="button" id="remove">Usuń</button>
+            <p>Wybrane tematy:</p>
+            <ul id="topics-items"></ul>
+            <p class="warning" id="warning-items"></p>
+            <p>Cena szkolenia:</p>
+            <p id="price"></p>
+            <p>Czas trwania szkolenia:</p>
+            <p id="timing"></p>
+            <br />
+            <hr />
+            <p>Preferowana data szkolenia</p>
+            <label for="training_date">Wybierz datę:</label>
+            <input type="date" id="training_date" name="training_date" />
+            <p class="warning" id="warning-date"></p>
+            <br />
+            <hr />
+            <p>Jak mamy się z Tobą skontaktować?</p>
+            <label for="fname">Imię:</label><br />
+            <input type="text" id="fname" name="fname" value="" />
+            <p class="warning" id="warning-fname"></p>
+            <label for="lname">Nazwisko:</label><br />
+            <input type="text" id="lname" name="lname" value="" />
+            <p class="warning" id="warning-lname"></p>
+            <label for="email">E-mail:</label><br />
+            <input type="text" id="email" name="email" value="" />
+            <p class="warning" id="warning-email"></p>
+            <label for="phone">Nr telefonu:</label><br />
+            <input type="text" id="phone" name="phone" value="" /><br /><br />
+            <button type="submit" id="submit">Zamów szkolenie</button>
+          </form>
+          <br />
+          <button id="return" onclick="location.href='index.html';">
+            Wyczyść dane i wróć
+          </button>
+        </section>
       </div>
     </div>
-
     <!-- Footer -->
     <div class="footer">
-      <h2>Footer</h2>
+      <a href="#" id="fb"><img class="social-links" src="./assets/img/facebook.png"></a>
+      <a href="#" id="fb"><img class="social-links" src="./assets/img/twitter.png"></a>
+      <a href="#" id="fb"><img class="social-links" src="./assets/img/in.png"></a>
+      <a href="#" id="fb"><img class="social-links" src="./assets/img/YT.png"></a>
+      <p class="copyright">Copyright &copy; 2021 Przemysław Narowski. All rights reserved.</p>
     </div>
   </body>
 </html>

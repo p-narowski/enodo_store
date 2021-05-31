@@ -2,15 +2,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 module.exports = {
-  entry: {
-    mainPage: "./src/index.js",
-    formPageOne: "./src/train_form.js",
-    formPageTwo: "./src/trouble_form.js",
-  },
+  entry: ["./src/index.js","./src/train_form.js", "./src/trouble_form.js"],
   output: {
-    // path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
@@ -20,14 +15,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/train_form.html",
-      filename: "train_form.html",
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/trouble_form.html",
-      filename: "trouble_form.html",
     }),
     new CleanWebpackPlugin(),
   ],

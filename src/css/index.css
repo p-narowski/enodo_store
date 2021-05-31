@@ -13,19 +13,23 @@ img {
   padding-bottom: 10px;
   object-fit: cover;
 }
-
+img:hover {
+  opacity: 50%;
+}
 /* Header/logo Title */
 .header {
   padding: 60px;
   text-align: center;
   background: #1abc9c;
   color: white;
+  width: 100%;
 }
 
 /* Style the top navigation bar */
 .navbar {
   display: flex;
   background-color: #333;
+  width: 100%;
 }
 
 /* Style the navigation bar links */
@@ -62,22 +66,10 @@ img {
   background-color: white;
   padding: 20px;
 }
-/* Single column */
-.single {
-  flex: 100%;
-  background-color: white;
-  padding: 20px;
+.hidden {
+  display: none;
 }
-#price,
-#timing {
-  /* color: #1abc9c; */
-  font-weight: bold;
-}
-.warning {
-  color: red;
-  font-weight: bold;
-  font-size: small;
-}
+
 /* Images */
 .fakeimg {
   background-color: #aaa;
@@ -92,85 +84,50 @@ img {
   background: #ddd;
   width: 100%;
 }
-
+.social-links{
+  width: 30px;
+}
+.copyright{
+  font-size: small;
+}
+/* Forms */
+#price,
+#timing {
+  font-weight: bold;
+}
+.warning {
+  color: red;
+  font-weight: bold;
+  font-size: small;
+}
+.radio-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+.radio-input li {
+  padding: 5px;
+}
+button {
+  color: white;
+  background-color: black;
+  border: none;
+  width: 165px;
+  height: 30px;
+}
+button:hover {
+  background-color: #ddd;
+  color: black;
+}
+#add, #remove{
+  width: 60px;
+}
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
   .row,
   .navbar {
     flex-direction: column;
   }
-}
-.form-container {
-  width: 100%;
-  /* max-width: 1200px; */
-  margin: 0 auto;
-}
-
-.form-container * {
-  box-sizing: border-box;
-}
-.flex-outer,
-.flex-inner {
-  list-style-type: none;
-  padding: 0;
-}
-
-.flex-outer {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.flex-outer li,
-.flex-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.flex-inner {
-  padding: 0 8px;
-  justify-content: space-between; 
-}
-
-.flex-outer > li:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.flex-outer li label,
-.flex-outer li p {
-  padding: 8px;
-}
-
-.flex-outer > li > label,
-.flex-outer li p {
-  flex: 1 0 120px;
-  max-width: 220px;
-}
-
-.flex-outer > li > label + *,
-.flex-inner {
-  flex: 1 0 220px
-}
-
-.flex-outer li p {
-  margin: 0;
-}
-
-.flex-outer li input:not([type="checkbox"]),
-.flex-outer li textarea {
-  padding: 15px;
-}
-
-.flex-outer li button {
-  margin-left: auto;
-  padding: 8px 16px;
-  background: #333;
-  color: #f2f2f2;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  border-radius: 2px;
-}
-
-.flex-inner li {
-  width: 250px;
 }

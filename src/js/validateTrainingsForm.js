@@ -1,5 +1,5 @@
 const { warningTag } = require("./arrangeTopics");
-
+const TRAINING_FORM_ID="trainings-form";
 const ITEMS_KEY = "ITEMS";
 const DATE_TAG_ID = "training_date";
 const DATE_WARN_ID = "warning-date";
@@ -73,6 +73,7 @@ function clearForm() {
   localStorage.removeItem(EMAIL_ID);
   localStorage.removeItem(ITEMS_KEY);
   localStorage.removeItem(PHONE_ID);
+  localStorage.removeItem(TRAINING_FORM_ID);
 }
 
 function submitData() {
@@ -107,4 +108,5 @@ module.exports = {
   email,
   phoneTag,
   phone,
+  TRAINING_FORM_ID
 };

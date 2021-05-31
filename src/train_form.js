@@ -6,6 +6,7 @@ import {
   calculatePrice,
   calculateTime,
   checkList,
+  itemsListElement,
 } from "./js/arrangeTopics";
 import {
   firstName,
@@ -32,9 +33,15 @@ const addBtn = document.getElementById("add");
 const remBtn = document.getElementById("remove");
 const subBtn = document.getElementById("submit");
 const returnBtn = document.getElementById("return");
+addBtn.addEventListener("click", () => {
+  addItem();
+  location.reload();
+});
+remBtn.addEventListener("click", () => {
+  removeItem();
+  location.reload();
+});
 
-addBtn.addEventListener("click", addItem);
-remBtn.addEventListener("click", removeItem);
 returnBtn.addEventListener("click", clearForm);
 subBtn.addEventListener("click", submitData);
 dateTag.addEventListener("change", validateDate);

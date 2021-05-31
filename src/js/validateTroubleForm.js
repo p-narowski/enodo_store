@@ -1,3 +1,4 @@
+const SUPPORT_FORM_ID="trouble-form";
 const RADIO_DEV_ID = "prod_dev";
 const RADIO_PREP_ID = "prod_prep";
 const RADIO_PROD_ID = "prod_prod";
@@ -75,7 +76,6 @@ function validateDescription() {
   }
 }
 function validateRadio() {
-    console.log(devRadio.checked);
   if (
     devRadio.checked ||
     prepRadio.checked ||
@@ -103,6 +103,7 @@ function clearForm2() {
   localStorage.removeItem(RADIO_ID);
   localStorage.removeItem(PHONE_ID_2);
   localStorage.removeItem(DESCR_ID);
+  localStorage.removeItem(SUPPORT_FORM_ID);
 }
 
 function submitData2() {
@@ -115,7 +116,7 @@ function submitData2() {
   ) {
     alert("W formularzu są błędy!");
   } else {
-    clearForm();
+    clearForm2();
   }
 }
 
@@ -143,5 +144,5 @@ module.exports = {
   prodRadio,
   otherRadio,
   radio,
-
+  SUPPORT_FORM_ID,
 };
