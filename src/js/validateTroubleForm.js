@@ -1,3 +1,4 @@
+const { showThanks, TRACE_ID} = require("./thankYou");
 const SUPPORT_FORM_ID="trouble-form";
 const RADIO_DEV_ID = "prod_dev";
 const RADIO_PREP_ID = "prod_prep";
@@ -13,7 +14,7 @@ const SURNAME_WARN_ID_2 = "warning-lname2";
 const EMAIL_ID_2 = "email2";
 const EMAIL_WARN_ID_2 = "warning-email2";
 const PHONE_ID_2 = "phone2";
-const WARNING_MESSAGE = "To pole jest obowiązkowe!";
+const WARNING_MESSAGE = "To pole jest obowiązkowe! (niepoprawne lub niewpisane dane)";
 const RADIO_ID = "radio";
 
 const descrTag = document.getElementById(DESCR_ID);
@@ -39,7 +40,7 @@ const description = localStorage.getItem(DESCR_ID);
 const radio = localStorage.getItem(RADIO_ID);
 
 function validateFirstName2() {
-  if (fNameTag2.value === "") {
+  if (fNameTag2.value === "" || fNameTag2.value.length < 2) {
     fnameWarning2.innerHTML = WARNING_MESSAGE;
   } else {
     localStorage.setItem(FIRST_NAME_ID_2, fNameTag2.value);
@@ -47,7 +48,7 @@ function validateFirstName2() {
   }
 }
 function validateLastName2() {
-  if (lNameTag2.value === "") {
+  if (lNameTag2.value === "" || lNameTag2.value.length < 2) {
     lnameWarning2.innerHTML = WARNING_MESSAGE;
   } else {
     localStorage.setItem(SURNAME_ID_2, lNameTag2.value);
@@ -55,7 +56,7 @@ function validateLastName2() {
   }
 }
 function validateEmail2() {
-  if (emailTag2.value === "") {
+  if (emailTag2.value === ""||!emailTag2.value.includes("@")) {
     emailWarning2.innerHTML = WARNING_MESSAGE;
   } else {
     localStorage.setItem(EMAIL_ID_2, emailTag2.value);
@@ -117,6 +118,8 @@ function submitData2() {
     alert("W formularzu są błędy!");
   } else {
     clearForm2();
+    localStorage.setItem(TRACE_ID, "consultancy");
+    showThanks();
   }
 }
 
