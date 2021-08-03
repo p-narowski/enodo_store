@@ -16,6 +16,9 @@ img {
 img:hover {
   opacity: 50%;
 }
+.logo{
+  max-width: 500px;
+}
 /* Header/logo Title */
 .header {
   padding: 60px;
@@ -69,12 +72,32 @@ img:hover {
 .hidden {
   display: none;
 }
-
+.expert-info{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.exp-desc{
+  max-width: 75%;
+  padding: 20px;
+  text-align: center;
+}
 /* Images */
 .fakeimg {
   background-color: #aaa;
   width: 100%;
   padding: 5px;
+}
+.portrait{
+  max-width: 50%;
+  background-color: #aaa;
+  padding: 5px;
+}
+.expert-photo{
+  max-width: 100%;
+}
+.expert-photo:hover{
+  opacity: 100%;
 }
 
 /* Footer */
@@ -125,6 +148,14 @@ button:hover {
   width: 60px;
 }
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1200px) {
+  .expert-info{
+    flex-direction: column;
+  }
+  .exp-desc{
+    max-width: 100%;
+  }
+}
 @media screen and (max-width: 700px) {
   .row,
   .navbar {

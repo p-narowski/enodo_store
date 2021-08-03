@@ -1,5 +1,5 @@
-const { showThanks, TRACE_ID} = require("./thankYou");
-const SUPPORT_FORM_ID="trouble-form";
+const { showThanks, TRACE_ID } = require("./thankYou");
+const SUPPORT_FORM_ID = "trouble-form";
 const RADIO_DEV_ID = "prod_dev";
 const RADIO_PREP_ID = "prod_prep";
 const RADIO_PROD_ID = "prod_prod";
@@ -14,7 +14,8 @@ const SURNAME_WARN_ID_2 = "warning-lname2";
 const EMAIL_ID_2 = "email2";
 const EMAIL_WARN_ID_2 = "warning-email2";
 const PHONE_ID_2 = "phone2";
-const WARNING_MESSAGE = "To pole jest obowiązkowe! (niepoprawne lub niewpisane dane)";
+const WARNING_MESSAGE =
+  "To pole jest obowiązkowe! (niepoprawne lub puste dane)";
 const RADIO_ID = "radio";
 
 const descrTag = document.getElementById(DESCR_ID);
@@ -56,7 +57,7 @@ function validateLastName2() {
   }
 }
 function validateEmail2() {
-  if (emailTag2.value === ""||!emailTag2.value.includes("@")) {
+  if (emailTag2.value === "" || !emailTag2.value.includes("@")) {
     emailWarning2.innerHTML = WARNING_MESSAGE;
   } else {
     localStorage.setItem(EMAIL_ID_2, emailTag2.value);

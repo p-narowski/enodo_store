@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ENODO</title>
+    <title>eNODO</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <!-- Header -->
     <div class="header">
-      <h1>eNODO</h1>
-      <p>We know <b>the right</b> way.</p>
+      <img src="./assets/img/enodo2.png" class="logo" id="go-home" alt="eNODO">
     </div>
     <!-- Navigation Bar -->
     <div class="navbar">
@@ -18,6 +17,7 @@
       <a href="#pricelist">Cennik</a>
       <a href="#how_to_hire">Jak nas zatrudnić?</a>
       <a href="#links">Nasze projekty</a>
+      <a href="#links">Nasi partnerzy</a>
       <a href="#contact" id="contact">Kontakt</a>
     </div>
     <!-- The flexible grid (content) -->
@@ -25,7 +25,7 @@
       <div class="side">
         <h2>O NAS</h2>
         <h5>Drużyna Ekspertów eNodo:</h5>
-        <div class="fakeimg" style="height: 200px">
+        <div class="fakeimg" style="height: 200px" id="team-pic">
           <img src="./assets/img/team.jpg" alt="THE E-TEAM" />
         </div>
         <p>
@@ -35,11 +35,11 @@
         </p>
         <h3>Referencje</h3>
         <p>Poznaj bliżej niektóre z naszych sukcesów</p>
-        <div class="fakeimg" style="height: 60px">Image</div>
+        <div class="fakeimg" style="height: 100px"><img src="./assets/img/vibracoustic-car.png" alt="automotive"></div>
         <br />
-        <div class="fakeimg" style="height: 60px">Image</div>
+        <div class="fakeimg" style="height: 100px"><img src="./assets/img/karwala.jpg" alt="trolley"></div>
         <br />
-        <div class="fakeimg" style="height: 60px">Image</div>
+        <div class="fakeimg" style="height: 100px"><img src="./assets/img/mold.jpg" alt="mold"></div>
       </div>
       <div class="main">
         <!-- Thank you page -->
@@ -58,30 +58,73 @@
         <!-- Home section -->
         <section id="home">
           <h2>POMAGAMY</h2>
-          <h5>Title description, Dec 7, 2017</h5>
+          <h5>Profesjonalne doradztwo techniczne</h5>
           <div class="fakeimg" style="height: 200px" id="support">
             <img src="./assets/img/support.jpg" alt="SUPPORT" />
           </div>
-          <p>Some text..</p>
-          <p>
-            Sunt in culpa qui officia deserunt mollit anim id est laborum
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco.
-          </p>
+          <p>Z zastosowaniem narzędzi takich jak symulacje numeryczne, analiza statystyczna i uczenie maszynowe, 
+            ale przede wszystkim dzięki naszemu doświadczeniu znajdujemy wyście z wielu sytuacji bez wyjścia.</p>
+          <p>Zapewniamy:</p>
+          <ul>
+            <li>analizę przyczyn i propozycję rozwiązań wad jakościowych wyprasek wtryskowych,</li>
+            <li>optymalizację procesu i narzędzia,</li>
+            <li>wdrożenie propoponowanych działań: CAD, CAM, obróbka maszynowa.</li>
+          </ul>
           <br />
           <h2>EDUKUJEMY</h2>
-          <h5>Title description, Sep 2, 2017</h5>
+          <h5>Szkolenia i konsultacje</h5>
           <div class="fakeimg" style="height: 200px" id="training">
             <img src="./assets/img/classroom.jpg" alt="SUPPORT" />
           </div>
-          <p>Some text..</p>
-          <p>
-            Sunt in culpa qui officia deserunt mollit anim id est laborum
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco.
-          </p>
+          <p>Realizujemy szkolenia i kursy z inżynierii wtryskiwania tworzyw polimerowych - w miejscu i czasie wybranym przez klienta.</p>
+          <p>Oferujemy następujące tematy szkoleń:</p>
+          <ul>
+            <li>obsługa wtryskarek,</li>
+            <li>ustawianie procesu wtryskiwania,</li>
+            <li>konserwacja i remont form wtryskowych,</li>
+            <li>budowa form wtryskowych,</li>
+            <li>symulacja wtryskiwania,</li>
+            <li>materiałoznawsto tworzyw polimerowych.</li>
+          </ul>
+        </section>
+        <!-- Our team section -->
+        <section class="hidden" id="team">
+          <h2>NASZ ZESPÓŁ</h2>
+          <div class="expert-info">
+            <div class="portrait" style="height: 200px">
+              <img src="./assets/img/SZ.jpg" class="expert-photo" title="Szymon Zięba" alt="Szymon_Zieba" />
+            </div>
+            <span class="exp-desc">
+            <h5>Szymon Zięba</h5>
+            <p>Nasz Mistrz, Kierownik Laboratorium w Zakładzie Przetwórstwa Tworzyw Sztucznych Politechniki Warszawskiej. 
+            Związany z przetwórstwem od kilkudziesięciu lat, przeprowadził łącznie ok. 450 szkoleń oraz ponad 150 konsultacji
+             z zakresu wtryskiwania i wytłaczania tworzyw polimerowych.</p>
+            </span>
+          </div>   
+        <br/>  
+        <div class="expert-info">
+            <div class="portrait" style="height: 200px">
+             <img src="./assets/img/PN.png" class="expert-photo" title="Przemysław Narowski" alt="Przemyslaw_Narowski" />
+            </div>
+          <span class="exp-desc">
+            <h5>Przemysław Narowski</h5>
+            <p>Certified Moldex3D Professional&reg;, zwycięzca międzynarodowego konkursu "Moldex3D Global Innovation Talent Award 2016",
+             specjalista w dziedzinie komputerowego wspomagania procesów przetwórstwa tworzyw sztucznych. 
+            Od ponad 10 lat gromadzi doświadczenie w technikach wtryskiwania, pracując na stanowiskach ustawiacza, 
+            technologa, konstruktora form, inżyniera ds. symulacji i obliczeń, a także pracownika uczelni.</p>
+          </span>   
+         </div> 
+         <br/>  
+        <div class="expert-info">
+            <div class="portrait" style="height: 200px">
+             <img src="./assets/img/RP.jpg" class="expert-photo" title="Rafał Pręga" alt="Rafal_Prega" />
+            </div>
+          <span class="exp-desc">
+            <h5>Rafał Pręga</h5>
+            <p>Doświadczony ślusarz narzędziowy i mechanik form wtryskowych, specjalista w dziedzinie obróbki maszynowej 
+              (frezowanie CNC i konwencjonalne, toczenie, EDM, WEDM, obróbki wykańczające), ale także eksploatacji, konserwacji i remontów form wtryskowych.</p>
+          </span>   
+         </div> 
         </section>
         <!-- Hidden form 1 -->
         <section class="hidden" id="trouble-form">
@@ -178,8 +221,8 @@
               <option value="Budowa form wtryskowych">
                 Budowa form wtryskowych
               </option>
-              <option value="Budowa systemów gorąco-kanałowych">
-                Budowa systemów gorąco-kanałowych
+              <option value="Konserwacja i remont form wtryskowych">
+                Konserwacja i remont form wtryskowych
               </option>
             </select>
             <button type="button" id="add">Dodaj</button>
@@ -226,7 +269,7 @@
       <a href="#" id="fb"><img class="social-links" src="./assets/img/twitter.png"></a>
       <a href="#" id="fb"><img class="social-links" src="./assets/img/in.png"></a>
       <a href="#" id="fb"><img class="social-links" src="./assets/img/YT.png"></a>
-      <p class="copyright">Copyright &copy; 2021 Przemysław Narowski. All rights reserved.</p>
+      <p class="copyright">Copyright &copy; 2021 eNODO Przemysław Narowski. All rights reserved.</p>
     </div>
   </body>
 </html>

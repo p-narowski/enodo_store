@@ -12,7 +12,7 @@ const EMAIL_ID = "email";
 const EMAIL_WARN_ID = "warning-email";
 const PHONE_ID = "phone";
 const WARNING_MESSAGE =
-  "To pole jest obowiązkowe! (niepoprawne lub niewpisane dane)";
+  "To pole jest obowiązkowe! (niepoprawne lub puste dane)";
 
 const dateTag = document.getElementById(DATE_TAG_ID);
 const dateWarning = document.getElementById(DATE_WARN_ID);
