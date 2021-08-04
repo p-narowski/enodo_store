@@ -16,7 +16,7 @@ img {
 img:hover {
   opacity: 50%;
 }
-.logo{
+.logo {
   max-width: 500px;
 }
 /* Header/logo Title */
@@ -72,12 +72,13 @@ img:hover {
 .hidden {
   display: none;
 }
-.expert-info{
+
+.expert-info {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.exp-desc{
+.exp-desc {
   max-width: 75%;
   padding: 20px;
   text-align: center;
@@ -88,18 +89,20 @@ img:hover {
   width: 100%;
   padding: 5px;
 }
-.portrait{
+.portrait {
   max-width: 50%;
   background-color: #aaa;
   padding: 5px;
 }
-.expert-photo{
+.expert-photo {
   max-width: 100%;
 }
-.expert-photo:hover{
+.expert-photo:hover {
   opacity: 100%;
 }
-
+.info-tab{
+  text-align: center;
+}
 /* Footer */
 .footer {
   padding: 20px;
@@ -107,10 +110,10 @@ img:hover {
   background: #ddd;
   width: 100%;
 }
-.social-links{
+.social-links {
   width: 30px;
 }
-.copyright{
+.copyright {
   font-size: small;
 }
 /* Forms */
@@ -144,15 +147,16 @@ button:hover {
   background-color: #ddd;
   color: black;
 }
-#add, #remove{
+#add,
+#remove {
   width: 60px;
 }
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1200px) {
-  .expert-info{
+  .expert-info {
     flex-direction: column;
   }
-  .exp-desc{
+  .exp-desc {
     max-width: 100%;
   }
 }

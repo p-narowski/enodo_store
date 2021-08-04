@@ -8,16 +8,21 @@
   <body>
     <!-- Header -->
     <div class="header">
-      <img src="./assets/img/enodo2.png" class="logo" id="go-home" alt="eNODO">
+      <img
+        src="./assets/img/enodo2.png"
+        class="logo"
+        id="go-home"
+        alt="eNODO"
+      />
     </div>
     <!-- Navigation Bar -->
     <div class="navbar">
       <a href="#home" id="go-home">Strona główna</a>
-      <a href="#services">Usługi</a>
-      <a href="#pricelist">Cennik</a>
-      <a href="#how_to_hire">Jak nas zatrudnić?</a>
-      <a href="#links">Nasze projekty</a>
-      <a href="#links">Nasi partnerzy</a>
+      <a href="#services" id="services-link">Usługi</a>
+      <a href="#pricelist" id="prices-link">Cennik</a>
+      <a href="#how_to_hire" id="how-to-hire-link">Jak nas zatrudnić?</a>
+      <a href="#projects" id="projects">Nasze projekty</a>
+      <a href="#partners" id="partners">Nasi partnerzy</a>
       <a href="#contact" id="contact">Kontakt</a>
     </div>
     <!-- The flexible grid (content) -->
@@ -35,11 +40,21 @@
         </p>
         <h3>Referencje</h3>
         <p>Poznaj bliżej niektóre z naszych sukcesów</p>
-        <div class="fakeimg" style="height: 100px"><img src="./assets/img/vibracoustic-car.png" alt="automotive"></div>
+        <div class="fakeimg" style="height: 100px" id="ref1-link">
+          <img src="./assets/img/vibracoustic-car.png" alt="automotive" />
+        </div>
         <br />
-        <div class="fakeimg" style="height: 100px"><img src="./assets/img/karwala.jpg" alt="trolley"></div>
+        <div class="fakeimg" style="height: 100px" id="ref2-link">
+          <img src="./assets/img/karwala.jpg" alt="trolley" />
+        </div>
         <br />
-        <div class="fakeimg" style="height: 100px"><img src="./assets/img/mold.jpg" alt="mold"></div>
+        <div class="fakeimg" style="height: 100px" id="ref3-link">
+          <img src="./assets/img/mold.jpg" alt="mold" />
+        </div>
+        <br />
+        <div class="fakeimg" style="height: 100px" id="ref4-link">
+          <img src="./assets/img/dashboard-3510327_1920.jpg" alt="mold" />
+        </div>
       </div>
       <div class="main">
         <!-- Thank you page -->
@@ -52,7 +67,8 @@
           <p>Skontaktujemy się z Tobą w przeciągu 48 godzin.</p>
           <button id="hide-thanks">OK</button>
           <p>
-            Klikając w przycisk potwierdzasz zgodę na przetwarzanie Twoich danych osobowych podanych w formularzu w celu obsługi zapytania.
+            Klikając w przycisk potwierdzasz zgodę na przetwarzanie Twoich
+            danych osobowych podanych w formularzu w celu obsługi zapytania.
           </p>
         </section>
         <!-- Home section -->
@@ -62,13 +78,22 @@
           <div class="fakeimg" style="height: 200px" id="support">
             <img src="./assets/img/support.jpg" alt="SUPPORT" />
           </div>
-          <p>Z zastosowaniem narzędzi takich jak symulacje numeryczne, analiza statystyczna i uczenie maszynowe, 
-            ale przede wszystkim dzięki naszemu doświadczeniu znajdujemy wyście z wielu sytuacji bez wyjścia.</p>
+          <p>
+            Z zastosowaniem narzędzi takich jak symulacje numeryczne, analiza
+            statystyczna i uczenie maszynowe, ale przede wszystkim dzięki
+            naszemu doświadczeniu znajdujemy wyście z wielu sytuacji bez
+            wyjścia.
+          </p>
           <p>Zapewniamy:</p>
           <ul>
-            <li>analizę przyczyn i propozycję rozwiązań wad jakościowych wyprasek wtryskowych,</li>
+            <li>
+              analizę przyczyn i propozycję rozwiązań wad jakościowych wyprasek
+              wtryskowych,
+            </li>
             <li>optymalizację procesu i narzędzia,</li>
-            <li>wdrożenie propoponowanych działań: CAD, CAM, obróbka maszynowa.</li>
+            <li>
+              wdrożenie propoponowanych działań: CAD, CAM, obróbka maszynowa.
+            </li>
           </ul>
           <br />
           <h2>EDUKUJEMY</h2>
@@ -76,7 +101,10 @@
           <div class="fakeimg" style="height: 200px" id="training">
             <img src="./assets/img/classroom.jpg" alt="SUPPORT" />
           </div>
-          <p>Realizujemy szkolenia i kursy z inżynierii wtryskiwania tworzyw polimerowych - w miejscu i czasie wybranym przez klienta.</p>
+          <p>
+            Realizujemy szkolenia i kursy z inżynierii wtryskiwania tworzyw
+            polimerowych - w miejscu i czasie wybranym przez klienta.
+          </p>
           <p>Oferujemy następujące tematy szkoleń:</p>
           <ul>
             <li>obsługa wtryskarek,</li>
@@ -92,39 +120,402 @@
           <h2>NASZ ZESPÓŁ</h2>
           <div class="expert-info">
             <div class="portrait" style="height: 200px">
-              <img src="./assets/img/SZ.jpg" class="expert-photo" title="Szymon Zięba" alt="Szymon_Zieba" />
+              <img
+                src="./assets/img/SZ.jpg"
+                class="expert-photo"
+                title="Szymon Zięba"
+                alt="Szymon_Zieba"
+              />
             </div>
             <span class="exp-desc">
-            <h5>Szymon Zięba</h5>
-            <p>Nasz Mistrz, Kierownik Laboratorium w Zakładzie Przetwórstwa Tworzyw Sztucznych Politechniki Warszawskiej. 
-            Związany z przetwórstwem od kilkudziesięciu lat, przeprowadził łącznie ok. 450 szkoleń oraz ponad 150 konsultacji
-             z zakresu wtryskiwania i wytłaczania tworzyw polimerowych.</p>
+              <h5>Szymon Zięba</h5>
+              <p>
+                Nasz Mistrz, Kierownik Laboratorium w Zakładzie Przetwórstwa
+                Tworzyw Sztucznych Politechniki Warszawskiej. Związany z
+                przetwórstwem od kilkudziesięciu lat, przeprowadził łącznie ok.
+                450 szkoleń oraz ponad 150 konsultacji z zakresu wtryskiwania i
+                wytłaczania tworzyw polimerowych.
+              </p>
             </span>
-          </div>   
-        <br/>  
-        <div class="expert-info">
+          </div>
+          <br />
+          <div class="expert-info">
             <div class="portrait" style="height: 200px">
-             <img src="./assets/img/PN.png" class="expert-photo" title="Przemysław Narowski" alt="Przemyslaw_Narowski" />
+              <img
+                src="./assets/img/PN.png"
+                class="expert-photo"
+                title="Przemysław Narowski"
+                alt="Przemyslaw_Narowski"
+              />
             </div>
-          <span class="exp-desc">
-            <h5>Przemysław Narowski</h5>
-            <p>Certified Moldex3D Professional&reg;, zwycięzca międzynarodowego konkursu "Moldex3D Global Innovation Talent Award 2016",
-             specjalista w dziedzinie komputerowego wspomagania procesów przetwórstwa tworzyw sztucznych. 
-            Od ponad 10 lat gromadzi doświadczenie w technikach wtryskiwania, pracując na stanowiskach ustawiacza, 
-            technologa, konstruktora form, inżyniera ds. symulacji i obliczeń, a także pracownika uczelni.</p>
-          </span>   
-         </div> 
-         <br/>  
-        <div class="expert-info">
+            <span class="exp-desc">
+              <h5>Przemysław Narowski</h5>
+              <p>
+                Certified Moldex3D Professional&reg;, zwycięzca międzynarodowego
+                konkursu "Moldex3D Global Innovation Talent Award 2016",
+                specjalista w dziedzinie komputerowego wspomagania procesów
+                przetwórstwa tworzyw sztucznych. Od ponad 10 lat gromadzi
+                doświadczenie w technikach wtryskiwania, pracując na
+                stanowiskach ustawiacza, technologa, konstruktora form,
+                inżyniera ds. symulacji i obliczeń, a także pracownika uczelni.
+              </p>
+            </span>
+          </div>
+          <br />
+          <div class="expert-info">
             <div class="portrait" style="height: 200px">
-             <img src="./assets/img/RP.jpg" class="expert-photo" title="Rafał Pręga" alt="Rafal_Prega" />
+              <img
+                src="./assets/img/RP.jpg"
+                class="expert-photo"
+                title="Rafał Pręga"
+                alt="Rafal_Prega"
+              />
             </div>
-          <span class="exp-desc">
-            <h5>Rafał Pręga</h5>
-            <p>Doświadczony ślusarz narzędziowy i mechanik form wtryskowych, specjalista w dziedzinie obróbki maszynowej 
-              (frezowanie CNC i konwencjonalne, toczenie, EDM, WEDM, obróbki wykańczające), ale także eksploatacji, konserwacji i remontów form wtryskowych.</p>
-          </span>   
-         </div> 
+            <span class="exp-desc">
+              <h5>Rafał Pręga</h5>
+              <p>
+                Doświadczony ślusarz narzędziowy i mechanik form wtryskowych,
+                specjalista w dziedzinie obróbki maszynowej (frezowanie CNC i
+                konwencjonalne, toczenie, EDM, WEDM, obróbki wykańczające), ale
+                także eksploatacji, konserwacji i remontów form wtryskowych.
+              </p>
+            </span>
+          </div>
+        </section>
+        <!-- Services section -->
+        <section class="hidden" id="services">
+          <h2>USŁUGI</h2>
+          <h5>
+            "Jeśli jest coś, czego nie potrafimy zrobić wydajniej, taniej i
+            lepiej niż konkurenci, nie ma sensu, żebyśmy to robili i powinniśmy
+            zatrudnić do wykonania tej pracy kogoś, kto zrobi to lepiej niż my."
+            Henry Ford
+          </h5>
+          <p>W skład oferowanych przez nas usług wchodzi:</p>
+          <ul>
+            <li>
+              optymalizacja metodami statystycznymi i AI wypraski, formy i
+              procesu w technikach wtryskiwania tworzyw polimerowych,
+            </li>
+            <li>symulacja wtryskiwania w programie Moldex3D,</li>
+            <li>konstrukcja form wtryskowych w programie Cimatron,</li>
+            <li>
+              projektowanie procesów technologicznych obróbki skrawaniem i EDM,
+            </li>
+            <li>przeglądy, naprawy i zmiany form wtryskowych,</li>
+            <li>analizy laboratoryjne materiałów polimerowych,</li>
+            <li>szkolenia i doradztwo techniczne.</li>
+          </ul>
+          <p>
+            Powyższa lista nie jest zamknięta. Wszelkie jej modyfikacje są
+            możliwe i zależne od Państwa - naszych klientów potrzeb.
+          </p>
+
+          <p>Zapraszamy serdecznie do kontaktu!</p>
+        </section>
+        <!-- Pricelist section -->
+        <section class="hidden" id="pricelist">
+          <h2>CENNIK</h2>
+
+          <p>
+            Poniżej znajdą Państwo przykładowe, poglądowe ceny naszych usług.
+          </p>
+          <ul>
+            <li>Szkolenie i doradztwo techniczne - 250 zł/godz.</li>
+            <li>
+              Przegląd formy wtryskowej według instrukcji klienta - 140 zł/godz.
+            </li>
+            <li>
+              Obróbka maszynowa (naprawa, zmiana elementów form wtryskowych) -
+              120 zł/godz.
+            </li>
+          </ul>
+          <p>
+            Powyższe wartości są jedynie orientacyjnymi szacunkami. Koszty
+            naszych usług są zawsze wycenianie indywidulanie w zależności od
+            typu i ilości zleconych nam prac.
+          </p>
+
+          <p>
+            Po zapoznaniu się z Państwa szczegółowymi wymaganiami, wystawiamy
+            dokładną ofertę cenową.
+          </p>
+        </section>
+        <!-- How to hire? -->
+        <section class="hidden" id="how-to-hire">
+          <h2>JAN NAS ZATRUDNIĆ?</h2>
+          <ul>
+            <li>
+              Wypełniając formularz "POMAGAMY" znajdujący się na stronie głównej
+              - w przypadku złóżenia zapytania o usługę doradczą
+            </li>
+            <li>
+              Wypełniając formularz "EDUKUJEMY" znajdujący się na stronie
+              głównej - w przypadku złóżenia zapytania o usługę szkoleniową
+            </li>
+            <li>
+              Pisząc wiadomość na dane adresowe podane w zakładce "Kontakt" - w
+              każdej innej sprawie.
+            </li>
+          </ul>
+          <p>
+            Na wszelkie zapytania odpowiadamy maksymalnie w przcięgu 48 godzin,
+            ale zazwyczaj dużo szybciej.
+          </p>
+        </section>
+        <!-- Projects -->
+        <section class="hidden" id="projects-section">
+          <h2>NASZE PROJEKTY</h2>
+          <h5>Tutaj znajdą Państwo lstę naszych aktualnych działań</h5>
+          <div class="fakeimg" style="height: 200px">
+            <img
+              src="./assets/img/site-3279650_1920.jpg"
+              alt="UNDER CONSTRUCTION"
+            />
+          </div>
+          <p>Strona w budowie - przepraszamy!</p>
+        </section>
+        <!-- Our partners section -->
+        <section class="hidden" id="partners-section">
+          <h2>NASI PARTNERZY</h2>
+          <h5>
+            "Talent wygrywa mecz, ale praca zespołowa i inteligencja wygrywa
+            mistrzostwa." Michael Jordan
+          </h5>
+          <p>
+            Codziennie współdziałamy w pracy dla Państwa - naszych klientów.
+          </p>
+          <div class="expert-info">
+            <div class="portrait" style="height: 100px">
+              <img
+                src="./assets/img/moldex3d-logo.jpg"
+                class="expert-photo"
+                title="www.moldex3d.com"
+                alt="Moldex3D"
+              />
+            </div>
+            <span class="exp-desc">
+              <a href="https://moldex3deurope.com/pl/">CoreTech System Co.</a>
+              <p>
+                Firma CoreTech jest producentem oprogramowania Moldex3D -
+                jednego z najlepszych systemów CAE na rynku przetwórstwa tworzyw
+                sztucznych. Oprogramowanie służy do symulacji wtrysku, która
+                jest elementem uzupełniającym projektowanie form wtryskowych i
+                wyprasek. Posiadanie, a przede wszystkim wykorzystanie w pracy
+                programu Moldex3D gwarantuje optymalizację projektów oraz
+                szybkie wdrażanie wyrobów do seryjnej produkcji.
+              </p>
+            </span>
+          </div>
+
+          <div class="expert-info">
+            <div class="portrait" style="height: 100px">
+              <img
+                src="./assets/img/tslogo.jpg"
+                class="expert-photo"
+                title="www.t-solution.eu"
+                alt="Technik-Solution"
+              />
+            </div>
+            <span class="exp-desc">
+              <a href="https://www.t-solution.eu/">Technic Solution</a>
+              <p>
+                Firma Technik-Solution specjalizuje się w sprzedaży i obsłudze
+                technicznej produktów oraz programów skierowanych do zakładów
+                narzędziowych i przetwórstwa tworzyw sztucznych. Jest
+                dystrybutorem systemu do optymalizacji procesów produkcyjnych
+                STASA QC.
+              </p>
+            </span>
+          </div>
+          <div class="expert-info">
+            <div class="portrait" style="height: 80px">
+              <img
+                src="./assets/img/tt.png"
+                class="expert-photo"
+                title="www.th-tech.pl"
+                alt="TH-Tech"
+              />
+            </div>
+            <span class="exp-desc">
+              <a href="https://www.th-tech.pl/">TH-Tech</a>
+              <p>
+                Firma TH-Tech oferuje szeroki wachlarz usług narzędziowych w
+                zakresie obróbki skrawaniem CNC oraz obróbki elektroerozyjnej.
+                Zajmuje się frezowaniem i toczeniem.
+              </p>
+            </span>
+          </div>
+          <div class="expert-info">
+            <div class="portrait" style="height: 100px">
+              <img
+                src="./assets/img/SANDVIK.png"
+                class="expert-photo"
+                title="www.sandvik.coromant.com"
+                alt="SANDVIK"
+              />
+            </div>
+            <span class="exp-desc">
+              <a href="https://www.sandvik.coromant.com/">SANDVIK</a>
+              <p>
+                Ogólnoświatowej grupa przemysłowa Sandvik to światowy lider w
+                zakresie narzędzi skrawających i rozwiązań narzędziowych. Firma
+                Sandvik dysponuje ogromnym „know-how” w zakresie przemysłowej
+                obróbki metalu i nieustannie prowadzi rozległe prace
+                badawczo-rozwojowe, dzięki którym jej produkty są najbardziej
+                zaawansowanymi i niezawodnymi produktami na rynku narzędzi
+                skrawających. Sandvik Coromant jest również producentem
+                oprogramowania Cimatron - zintegrowanego rozwiązania CAD/CAM
+                skierowanego do producentów i projektantów form wtryskowych.
+              </p>
+            </span>
+          </div>
+          <div class="expert-info">
+            <div class="portrait" style="height: 70px">
+              <img
+                src="./assets/img/dopak.png"
+                class="expert-photo"
+                title="www.dopak.pl"
+                alt="DOPAK"
+              />
+            </div>
+            <span class="exp-desc">
+              <a href="https://www.dopak.pl/"
+                >Centrum Badawczo-Rozwojowe firmy Dopak</a
+              >
+              <p>
+                Centrum B+R realizuje projekty badawcze dotyczące
+                technologicznego opracowywania nowych produktów lub ulepszania
+                już istniejących wyrobów formowanych metodą wtryskową oraz
+                kompozytową.
+              </p>
+            </span>
+          </div>
+        </section>
+        <!-- How to hire? -->
+        <section class="hidden" id="contact-section">
+          <h2>KONTAKT</h2>
+          <div class="info-tab">
+            <hr />
+            <h5>Numer telefonu</h5>
+            <p>516181</p>
+            <hr />
+            <h5>Adres e-mail</h5>
+            <p>info@info.pl</p>
+            <hr />
+            <h5>Adres pocztowy</h5>
+            <p>ul. Jodłowa 14, Maków Mazowiecki</p>
+            <hr />
+          </div>
+        </section>
+        <!-- Refernce 1 -->
+        <section class="hidden" id="ref1-section">
+          <h2>POPRAWA WYTRZYMAŁOŚCI ZMĘCZENIOWEJ ELEMENTU SPRĘŻYSTEGO</h2>
+          <div class="info-tab">
+          <hr>
+          <h5>Klient</h5>
+          <p>Vibracoustic Polska sp. z o.o. - producent elementów zawieszenia, tłumików drgań do aut osobowych i ciężarowych</p>
+          <hr>
+          <h5>Produkt</h5>
+          <p>sprężyna poliuretanowa</p>
+          <hr>
+          <h5>Technika wytwarzania</h5>
+          <p>wtryskiwanie reaktywne</p>
+          <hr>
+          <h5>Opis problemu</h5>
+          <p>wartość wysokocyklowej wytrzymałości zmęczeniowej stanowiła 30% wartości wymaganej przez klienta</p>
+          <hr>
+          <h5>Metoda analizy problemu</h5>
+          <p>symulacje numeryczne wtryskiwania</p>
+          <hr>
+          <h5>Propozycja rozwiązania</h5>
+          <p>zmiana położenia przewężki w formie</p>
+          <hr>
+          <h5>Skutek wprowadzenia propozycji</h5>
+          <p>wzrost wytrzymałości zmęczeniowej do 100% wartości wymaganej</p>
+          <hr>
+        </div>
+        </section>
+        <!-- Refernce 2 -->
+        <section class="hidden" id="ref2-section">
+          <h2>W OPRACOWANIU</h2>
+          <div class="info-tab">
+          <hr>
+          <h5>Klient</h5>
+          <p>...</p>
+          <hr>
+          <h5>Produkt</h5>
+          <p>...</p>
+          <hr>
+          <h5>Technika wytwarzania</h5>
+          <p>wtryskiwanie tworzyw termoplastycznych</p>
+          <hr>
+          <h5>Opis problemu</h5>
+          <p>...</p>
+          <hr>
+          <h5>Metoda analizy problemu</h5>
+          <p>symulacje numeryczne wtryskiwania</p>
+          <hr>
+          <h5>Propozycja rozwiązania</h5>
+          <p>...</p>
+          <hr>
+          <h5>Skutek wprowadzenia propozycji</h5>
+          <p>...</p>
+          <hr>
+        </div>
+        </section>
+        <!-- Refernce 3 -->
+        <section class="hidden" id="ref3-section">
+          <h2>INŻYNIERIA ODWROTNA GŁOWICY SUWAKA</h2>
+          <div class="info-tab">
+          <hr>
+          <h5>Klient</h5>
+          <p>międzynarodowa firma z branży automotive (nazwa utajniona)</p>
+          <hr>
+          <h5>Produkt</h5>
+          <p>element wyposażenia wnętrza samochodu</p>
+          <hr>
+          <h5>Technika wytwarzania</h5>
+          <p>wtryskiwanie tworzyw termoplastycznych</p>
+          <hr>
+          <h5>Opis problemu</h5>
+          <p>uszkodzona część suwaka formująca detal - brak dokumentacji formy</p>
+          <hr>
+          <h5>Metoda rozwiązania problemu</h5>
+          <p>napawanie i iteracyjne drążenie, a następnie pasowanie i tuszowanie powierzchni formy</p>
+          <hr>
+          <h5>Skutek wprowadzenia propozycji</h5>
+          <p>100% zatwierdzonych przez kontrolę jakości części wyprodukowanych po naprawie narzędzia</p>
+          <hr>
+        </div>
+        </section>
+        <!-- Refernce 4 -->
+        <section class="hidden" id="ref4-section">
+          <h2>REDUKCJA WARTOŚĆI WYPACZENIA</h2>
+          <div class="info-tab">
+          <hr>
+          <h5>Klient</h5>
+          <p>międzynarodowa firma z branży automotive (nazwa utajniona)</p>
+          <hr>
+          <h5>Produkt</h5>
+          <p>schowek pasażera</p>
+          <hr>
+          <h5>Technika wytwarzania</h5>
+          <p>wtryskiwanie tworzyw termoplastycznych</p>
+          <hr>
+          <h5>Opis problemu</h5>
+          <p>wypaczenie elementu uniemożliwiające jego montaż</p>
+          <hr>
+          <h5>Metoda analizy problemu</h5>
+          <p>symulacje numeryczne wtryskiwania</p>
+          <hr>
+          <h5>Propozycja rozwiązania</h5>
+          <p>optymalizacja metodą uczenia maszynowego parametrów procesu</p>
+          <hr>
+          <h5>Skutek wprowadzenia propozycji</h5>
+          <p>redukcja wybranej wartości wypaczenia o 65% - umożliwienie montażu</p>
+          <hr>
+        </div>
         </section>
         <!-- Hidden form 1 -->
         <section class="hidden" id="trouble-form">
@@ -265,11 +656,21 @@
     </div>
     <!-- Footer -->
     <div class="footer">
-      <a href="#" id="fb"><img class="social-links" src="./assets/img/facebook.png"></a>
-      <a href="#" id="fb"><img class="social-links" src="./assets/img/twitter.png"></a>
-      <a href="#" id="fb"><img class="social-links" src="./assets/img/in.png"></a>
-      <a href="#" id="fb"><img class="social-links" src="./assets/img/YT.png"></a>
-      <p class="copyright">Copyright &copy; 2021 eNODO Przemysław Narowski. All rights reserved.</p>
+      <a href="#" id="fb"
+        ><img class="social-links" src="./assets/img/facebook.png"
+      /></a>
+      <a href="#" id="fb"
+        ><img class="social-links" src="./assets/img/twitter.png"
+      /></a>
+      <a href="#" id="fb"
+        ><img class="social-links" src="./assets/img/in.png"
+      /></a>
+      <a href="#" id="fb"
+        ><img class="social-links" src="./assets/img/YT.png"
+      /></a>
+      <p class="copyright">
+        Copyright &copy; 2021 eNODO Przemysław Narowski. All rights reserved.
+      </p>
     </div>
   </body>
 </html>
