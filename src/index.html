@@ -417,14 +417,14 @@
             <p>+48 698-137-911</p>
             <hr />
             <h5>Adres e-mail</h5>
-            <p>info@info.pl</p>
+            <p>info@e-nodo.pl</p>
             <hr />
             <h5>Adres pocztowy</h5>
-            <p>ul. Jodłowa 14, Maków Mazowiecki</p>
+            <p>ul. Jodłowa 14, 06-200 Maków Mazowiecki</p>
             <hr />
           </div>
         </section>
-        <!-- Refernce 1 -->
+        <!-- Reference 1 -->
         <section class="hidden" id="ref1-section">
           <h2>POPRAWA WYTRZYMAŁOŚCI ZMĘCZENIOWEJ ELEMENTU SPRĘŻYSTEGO</h2>
           <div class="info-tab">
@@ -452,7 +452,7 @@
           <hr>
         </div>
         </section>
-        <!-- Refernce 2 -->
+        <!-- Reference 2 -->
         <section class="hidden" id="ref2-section">
           <h2>W OPRACOWANIU</h2>
           <div class="info-tab">
@@ -480,7 +480,7 @@
           <hr>
         </div>
         </section>
-        <!-- Refernce 3 -->
+        <!-- Reference 3 -->
         <section class="hidden" id="ref3-section">
           <h2>INŻYNIERIA ODWROTNA GŁOWICY SUWAKA</h2>
           <div class="info-tab">
@@ -505,7 +505,7 @@
           <hr>
         </div>
         </section>
-        <!-- Refernce 4 -->
+        <!-- Reference 4 -->
         <section class="hidden" id="ref4-section">
           <h2>REDUKCJA WARTOŚĆI WYPACZENIA</h2>
           <div class="info-tab">
@@ -611,7 +611,7 @@
           <h2>Czego chciałbyś się dowiedzieć?</h2>
           <h5>Sprecyzuj swoje potrzeby</h5>
           <hr />
-          <form action="">
+          <form>
             <p>Wybierz interesujące Cię tematy szkolenia</p>
             <label for="new-topic">Tematy:</label>
             <select name="new-topic" id="new-topic">
@@ -657,11 +657,14 @@
             <input type="text" id="lname" name="lname" value="" />
             <p class="warning" id="warning-lname"></p>
             <label for="email">E-mail:</label><br />
-            <input type="text" id="email" name="email" value="" />
+            <input type="email" id="email" name="email" value="" />
             <p class="warning" id="warning-email"></p>
             <label for="phone">Nr telefonu:</label><br />
             <input type="text" id="phone" name="phone" value="" /><br /><br />
-            <button type="submit" id="submit">Zamów szkolenie</button>
+            <button type="button" id="submit">Zamów szkolenie</button>
+            <div id="loading" class="hidden">
+              <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div>
           </form>
           <br />
           <button id="return" onclick="location.href='index.html';">

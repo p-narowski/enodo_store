@@ -1,5 +1,8 @@
 const { warningTag } = require("./arrangeTopics");
+const { ShowSpinner } = require("./loader");
 const { showThanks, TRACE_ID } = require("./thankYou");
+const SUBMIT_ID="submit";
+const SPINNER_ID="loading";
 const TRAINING_FORM_ID = "trainings-form";
 const ITEMS_KEY = "ITEMS";
 const DATE_TAG_ID = "training_date";
@@ -13,6 +16,9 @@ const EMAIL_WARN_ID = "warning-email";
 const PHONE_ID = "phone";
 const WARNING_MESSAGE =
   "To pole jest obowiązkowe! (niepoprawne lub puste dane)";
+
+const spinner = document.getElementById(SPINNER_ID);
+const subBtn = document.getElementById(SUBMIT_ID);
 
 const dateTag = document.getElementById(DATE_TAG_ID);
 const dateWarning = document.getElementById(DATE_WARN_ID);
@@ -29,6 +35,7 @@ const lastName = localStorage.getItem(SURNAME_ID);
 const date = localStorage.getItem(DATE_TAG_ID);
 const email = localStorage.getItem(EMAIL_ID);
 const phone = localStorage.getItem(PHONE_ID);
+const topics = localStorage.getItem(ITEMS_KEY);
 
 function validateDate() {
   if (dateTag.value === "") {
@@ -47,7 +54,7 @@ function validateFirstName() {
   }
 }
 function validateLastName() {
-  if (lNameTag.value === ""|| lNameTag.value.length < 2) {
+  if (lNameTag.value === "" || lNameTag.value.length < 2) {
     lnameWarning.innerHTML = WARNING_MESSAGE;
   } else {
     localStorage.setItem(SURNAME_ID, lNameTag.value);
@@ -75,7 +82,7 @@ function clearForm() {
   localStorage.removeItem(EMAIL_ID);
   localStorage.removeItem(ITEMS_KEY);
   localStorage.removeItem(PHONE_ID);
-  localStorage.removeItem(TRAINING_FORM_ID);
+  // localStorage.removeItem(TRAINING_FORM_ID);
 }
 
 function submitData() {
@@ -88,10 +95,39 @@ function submitData() {
   ) {
     alert("W formularzu są błędy!");
   } else {
-    clearForm();
+    submitTrainingsForm();
     localStorage.setItem(TRACE_ID, "training");
-    showThanks();
+    localStorage.removeItem(TRAINING_FORM_ID);
+    ShowSpinner(subBtn, spinner);
+    setTimeout(()=>{
+      showThanks();
+      clearForm();
+      location.reload();
+    }, 5000)  
   }
+}
+function submitTrainingsForm() {
+  fetch("https://formsubmit.co/ajax/6be472dd102b6e08c916c65b920d60a1", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      formType: "Training",
+      // firstname: `${firstName}`,
+      firstname: `${fNameTag.value}`,
+      surname: `${lNameTag.value}`,
+      date: `${dateTag.value}`,
+      email: `${emailTag.value}`,
+      phone_number: `${phoneTag.value}`,
+      topicList: `${topics}`,
+      _captcha: "false"
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
 }
 module.exports = {
   validateDate,

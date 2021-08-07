@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+
 module.exports = {
   entry: ["./src/index.js","./src/train_form.js", "./src/trouble_form.js"],
   output: {
@@ -17,6 +19,7 @@ module.exports = {
       template: "./src/index.html",
     }),
     new CleanWebpackPlugin(),
+    new FaviconsWebpackPlugin("./src/logo.png"),
   ],
   module: {
     rules: [

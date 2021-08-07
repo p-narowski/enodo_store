@@ -31,8 +31,9 @@ import { possibleDate } from "./js/checkDate";
 
 const addBtn = document.getElementById("add");
 const remBtn = document.getElementById("remove");
-const subBtn = document.getElementById("submit");
 const returnBtn = document.getElementById("return");
+const subBtn = document.getElementById("submit");
+
 addBtn.addEventListener("click", () => {
   addItem();
   location.reload();
