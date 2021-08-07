@@ -1,4 +1,7 @@
 const { showThanks, TRACE_ID } = require("./thankYou");
+const { ShowSpinner } = require("./loader");
+const SUBMIT_ID_2="submit2";
+const SPINNER_ID_2="loading2";
 const SUPPORT_FORM_ID = "trouble-form";
 const RADIO_DEV_ID = "prod_dev";
 const RADIO_PREP_ID = "prod_prep";
@@ -17,6 +20,9 @@ const PHONE_ID_2 = "phone2";
 const WARNING_MESSAGE =
   "To pole jest obowiązkowe! (niepoprawne lub puste dane)";
 const RADIO_ID = "radio";
+
+const spinner2 = document.getElementById(SPINNER_ID_2);
+const subBtn2 = document.getElementById(SUBMIT_ID_2);
 
 const descrTag = document.getElementById(DESCR_ID);
 const descrWarning = document.getElementById(DESCR_WARN_ID);
@@ -105,7 +111,7 @@ function clearForm2() {
   localStorage.removeItem(RADIO_ID);
   localStorage.removeItem(PHONE_ID_2);
   localStorage.removeItem(DESCR_ID);
-  localStorage.removeItem(SUPPORT_FORM_ID);
+  
 }
 
 function submitData2() {
@@ -118,12 +124,39 @@ function submitData2() {
   ) {
     alert("W formularzu są błędy!");
   } else {
-    clearForm2();
+    submitTroubleForm();
     localStorage.setItem(TRACE_ID, "consultancy");
-    showThanks();
+    localStorage.removeItem(SUPPORT_FORM_ID);
+    ShowSpinner(subBtn2, spinner2);
+    setTimeout(()=>{
+      showThanks();
+      clearForm2();
+      location.reload();
+    }, 5000)
   }
 }
-
+function submitTroubleForm() {
+  fetch("https://formsubmit.co/ajax/info@e-nodo.pl", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      formType: "Consultancy",
+      firstname: `${fNameTag2.value}`,
+      surname: `${lNameTag2.value}`,
+      email: `${emailTag2.value}`,
+      phone_number: `${phoneTag2.value}`,
+      description: `${descrTag.value}`,
+      area: `${radio}`,
+      _captcha: "false"
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
+}
 module.exports = {
   validateFirstName2,
   validateLastName2,

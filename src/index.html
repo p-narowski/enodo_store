@@ -595,11 +595,14 @@
             <input type="text" id="lname2" name="lname2" value="" />
             <p class="warning" id="warning-lname2"></p>
             <label for="email2">E-mail:</label><br />
-            <input type="text" id="email2" name="email2" value="" />
+            <input type="email" id="email2" name="email2" value="" />
             <p class="warning" id="warning-email2"></p>
             <label for="phone2">Nr telefonu:</label><br />
-            <input type="text" id="phone2" name="phone2" value="" /><br /><br />
-            <button type="submit" id="submit2">Sprawdź nas!</button>
+            <input type="number" id="phone2" name="phone2" value="" /><br /><br />
+            <button type="button" id="submit2">Sprawdź nas!</button>
+            <div id="loading2" class="hidden">
+              <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div>
           </form>
           <br />
           <button id="return2" onclick="location.href='index.html';">
@@ -660,7 +663,7 @@
             <input type="email" id="email" name="email" value="" />
             <p class="warning" id="warning-email"></p>
             <label for="phone">Nr telefonu:</label><br />
-            <input type="text" id="phone" name="phone" value="" /><br /><br />
+            <input type="number" id="phone" name="phone" value="" /><br /><br />
             <button type="button" id="submit">Zamów szkolenie</button>
             <div id="loading" class="hidden">
               <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>

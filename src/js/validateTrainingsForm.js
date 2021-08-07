@@ -107,7 +107,7 @@ function submitData() {
   }
 }
 function submitTrainingsForm() {
-  fetch("https://formsubmit.co/ajax/6be472dd102b6e08c916c65b920d60a1", {
+  fetch("https://formsubmit.co/ajax/info@e-nodo.pl", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
