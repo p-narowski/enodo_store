@@ -28,7 +28,10 @@ import {
 const subBtn2 = document.getElementById("submit2");
 const returnBtn2 = document.getElementById("return2");
 
-returnBtn2.addEventListener("click", clearForm2);
+returnBtn2.addEventListener("click", ()=>{
+  clearForm2();
+  location.reload();
+});
 subBtn2.addEventListener("click", submitData2);
 fNameTag2.addEventListener("keyup", validateFirstName2);
 lNameTag2.addEventListener("keyup", validateLastName2);

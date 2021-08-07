@@ -82,9 +82,10 @@ function clearForm() {
   localStorage.removeItem(EMAIL_ID);
   localStorage.removeItem(ITEMS_KEY);
   localStorage.removeItem(PHONE_ID);
-  // localStorage.removeItem(TRAINING_FORM_ID);
 }
-
+function hideTrainingForm(){
+  localStorage.removeItem(TRAINING_FORM_ID);
+}
 function submitData() {
   if (
     dateWarning.innerHTML ||
@@ -97,7 +98,7 @@ function submitData() {
   } else {
     submitTrainingsForm();
     localStorage.setItem(TRACE_ID, "training");
-    localStorage.removeItem(TRAINING_FORM_ID);
+    hideTrainingForm();
     ShowSpinner(subBtn, spinner);
     setTimeout(()=>{
       showThanks();
@@ -115,7 +116,6 @@ function submitTrainingsForm() {
     },
     body: JSON.stringify({
       formType: "Training",
-      // firstname: `${firstName}`,
       firstname: `${fNameTag.value}`,
       surname: `${lNameTag.value}`,
       date: `${dateTag.value}`,
@@ -137,6 +137,7 @@ module.exports = {
   validatePhone,
   submitData,
   clearForm,
+  hideTrainingForm,
   firstName,
   date,
   dateTag,

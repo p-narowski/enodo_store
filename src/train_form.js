@@ -43,7 +43,10 @@ remBtn.addEventListener("click", () => {
   location.reload();
 });
 
-returnBtn.addEventListener("click", clearForm);
+returnBtn.addEventListener("click", ()=>{
+  clearForm();
+  location.reload();
+});
 subBtn.addEventListener("click", submitData);
 dateTag.addEventListener("change", validateDate);
 fNameTag.addEventListener("keyup", validateFirstName);

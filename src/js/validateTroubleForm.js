@@ -111,7 +111,9 @@ function clearForm2() {
   localStorage.removeItem(RADIO_ID);
   localStorage.removeItem(PHONE_ID_2);
   localStorage.removeItem(DESCR_ID);
-  
+}
+function hideTroubleForm(){
+  localStorage.removeItem(SUPPORT_FORM_ID);
 }
 
 function submitData2() {
@@ -126,7 +128,7 @@ function submitData2() {
   } else {
     submitTroubleForm();
     localStorage.setItem(TRACE_ID, "consultancy");
-    localStorage.removeItem(SUPPORT_FORM_ID);
+    hideTroubleForm();
     ShowSpinner(subBtn2, spinner2);
     setTimeout(()=>{
       showThanks();
@@ -166,6 +168,7 @@ module.exports = {
   validateRadio,
   clearForm2,
   submitData2,
+  hideTroubleForm,
   firstName2,
   fNameTag2,
   lNameTag2,
