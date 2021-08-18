@@ -9,6 +9,13 @@ import {
   hideThanks,
   TRACE_ID,
 } from "./js/thankYou";
+import {
+  hideCookieBar,
+  COOKIE_BUTTON_ID,
+  COOKIE_BOX_ID,
+  cookieBar,
+  saveSelectionInStorage,
+} from "./js/cookieMessage";
 
 const HOME_SECTION_ID = "home";
 const SUPPORT_PIC_ID = "support";
@@ -75,6 +82,7 @@ const homeLinks = document.querySelectorAll(`#${HOME_LINK_ID}`);
 const hideThankYouBtn = document.getElementById(HIDE_THANK_ID);
 const trace = localStorage.getItem(TRACE_ID);
 const thankMessage = document.getElementById(THANK_MESSAGE_ID);
+const cookiesButton = document.getElementById(COOKIE_BUTTON_ID);
 
 for (var i = 0; i < selectionPics.length; i++) {
   selectionPics[i].onmouseover = markUp;
@@ -90,103 +98,101 @@ if (trace == "training") {
   thankMessage.innerHTML = "Za zgłoszenie zapytania w temacie konsultacji";
 }
 
+cookiesButton.addEventListener("click", hideCookieBar);
+
 supportPic.addEventListener("click", () => {
   homeSection.classList.add(HIDDEN_CLASS);
   supportFormSection.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(SUPPORT_FORM_ID, HIDDEN_CLASS);
-  location.href="#trouble-form";
+  location.href = "#trouble-form";
 });
 trainingPic.addEventListener("click", () => {
   homeSection.classList.add(HIDDEN_CLASS);
   trainingFormSection.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(TRAINING_FORM_ID, HIDDEN_CLASS);
-  location.href="#trainings-form";
+  location.href = "#trainings-form";
 });
 teamPic.addEventListener("click", () => {
-  localStorage.clear();
+  clearLocalStorage()
   homeSection.classList.add(HIDDEN_CLASS);
   teamSection.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(TEAM_SECTION_ID, HIDDEN_CLASS);
   //location.reload();
-  location.href="#team";  
+  location.href = "#team";
 });
 servicesLink.addEventListener("click", () => {
-  localStorage.clear();
+  clearLocalStorage()
   homeSection.classList.add(HIDDEN_CLASS);
   servicesSection.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(SERVICES_SECTION_ID, HIDDEN_CLASS);
-  //location.reload(); 
+  //location.reload();
 });
 pricesLink.addEventListener("click", () => {
-  localStorage.clear();
+  clearLocalStorage()
   homeSection.classList.add(HIDDEN_CLASS);
   pricesSection.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(PRICELIST_SECTION_ID, HIDDEN_CLASS);
   //location.reload();
 });
 hireLink.addEventListener("click", () => {
-  localStorage.clear();
+  clearLocalStorage()
   homeSection.classList.add(HIDDEN_CLASS);
   hireSection.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(HIRE_SECTION_ID, HIDDEN_CLASS);
   // location.reload();
 });
 projectsLink.addEventListener("click", () => {
-  localStorage.clear();
+  clearLocalStorage()
   homeSection.classList.add(HIDDEN_CLASS);
   projectsSection.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(PROJECTS_SECTION_ID, HIDDEN_CLASS);
   // location.reload();
 });
 partnersLink.addEventListener("click", () => {
-  localStorage.clear();
+  clearLocalStorage()
   homeSection.classList.add(HIDDEN_CLASS);
   partnersSection.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(PARTNERS_SECTION_ID, HIDDEN_CLASS);
   // location.reload();
 });
 contactLink.addEventListener("click", () => {
-  localStorage.clear();
+  clearLocalStorage()
   homeSection.classList.add(HIDDEN_CLASS);
   contactSection.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(CONTACT_SECTION_ID, HIDDEN_CLASS);
-//  location.reload();
+  //  location.reload();
 });
 ref1pic.addEventListener("click", () => {
-  localStorage.clear();
+  clearLocalStorage()
   homeSection.classList.add(HIDDEN_CLASS);
   ref1Section.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(REF1_SECTION_ID, HIDDEN_CLASS);
   //location.reload();
-  location.href="#ref1-section";
-  
+  location.href = "#ref1-section";
 });
 ref4pic.addEventListener("click", () => {
-  localStorage.clear();
+  clearLocalStorage()
   homeSection.classList.add(HIDDEN_CLASS);
   ref4Section.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(REF4_SECTION_ID, HIDDEN_CLASS);
   //location.reload();
-  location.href="#ref4-section";
-  
+  location.href = "#ref4-section";
 });
 ref2pic.addEventListener("click", () => {
-  localStorage.clear();
+  clearLocalStorage()
   homeSection.classList.add(HIDDEN_CLASS);
   ref2Section.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(REF2_SECTION_ID, HIDDEN_CLASS);
   //location.reload();
-  location.href="#ref2-section";
-  
+  location.href = "#ref2-section";
 });
 ref3pic.addEventListener("click", () => {
-  localStorage.clear();
+  clearLocalStorage()
   homeSection.classList.add(HIDDEN_CLASS);
   ref3Section.classList.remove(HIDDEN_CLASS);
   localStorage.setItem(REF3_SECTION_ID, HIDDEN_CLASS);
   //location.reload();
-  location.href="#ref3-section";
-  
+  location.href = "#ref3-section";
 });
 for (var i = 0; i < homeLinks.length; i++) {
   homeLinks[i].addEventListener("click", goHome);
@@ -252,10 +258,22 @@ function updateView() {
     let storedClassName = localStorage.getItem(REF4_SECTION_ID);
     ref4Section.classList.remove(storedClassName);
     homeSection.classList.add(storedClassName);
+  } else if (localStorage.getItem(COOKIE_BOX_ID)) {
+    let storedClassName = localStorage.getItem(COOKIE_BOX_ID);
+    cookieBar.classList.add(storedClassName);
+  }
+}
+function clearLocalStorage() {
+  if (localStorage.getItem(COOKIE_BOX_ID)) {
+    localStorage.clear();
+    saveSelectionInStorage();
+  } else {
+    localStorage.clear();
   }
 }
 function goHome() {
-  localStorage.clear();
+  clearLocalStorage();
   location.reload();
+  location.href = "#home";
 }
 updateView();
