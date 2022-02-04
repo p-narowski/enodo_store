@@ -25,8 +25,9 @@
       <a href="#services"  id="services-link">Usługi</a>
       <a href="#pricelist" id="prices-link">Cennik</a>
       <a href="#how-to-hire" id="how-to-hire-link">Jak nas zatrudnić?</a>
-      <a href="#projects-section" id="projects">Nasze projekty</a>
+      <a href="#projects-section" id="projects"style="display: none">Nasze projekty</a>
       <a href="#partners-section" id="partners">Nasi partnerzy</a>
+      <a href="https://rozwiazaniadlawtryskiwania.pl/" id="blog">Blog</a>
       <a href="#contact-section" id="contact">Kontakt</a>
     </div>
     <!-- The flexible grid (content) -->
@@ -44,20 +45,20 @@
         </p>
         <h2>REFERENCJE</h2>
         <p>Poznaj bliżej niektóre z naszych sukcesów</p>
-        <div class="fakeimg" style="height: 100px" id="ref1-link" >
-          <img src="./assets/img/vibracoustic-car.png" alt="automotive" />
+        <div class="fakeimg" style="height: 200px" id="ref1-link" >
+          <img src="./assets/img/vibracoustic.jpg" alt="automotive" />
         </div>
         <br />
-        <div class="fakeimg" style="height: 100px" id="ref2-link">
-          <img src="./assets/img/karwala.jpg" alt="trolley" />
+        <div class="fakeimg" style="height: 200px" id="ref2-link">
+          <img src="./assets/img/akces-plast.png" alt="household" />
         </div>
         <br />
-        <div class="fakeimg" style="height: 100px" id="ref3-link">
+        <div class="fakeimg" style="display: none" id="ref3-link">
           <img src="./assets/img/mold.jpg" alt="mold" />
         </div>
         <br />
-        <div class="fakeimg" style="height: 100px" id="ref4-link">
-          <img src="./assets/img/dashboard-3510327_1920.jpg" alt="mold" />
+        <div class="fakeimg" style="height: 200px" id="ref4-link">
+          <img src="./assets/img/Dr-Schneider.jpg" alt="mold" />
         </div>
       </div>
       <div class="main">
@@ -112,7 +113,7 @@
             <li>konserwacja i remont form wtryskowych,</li>
             <li>budowa form wtryskowych,</li>
             <li>symulacja wtryskiwania,</li>
-            <li>materiałoznawsto tworzyw polimerowych.</li>
+            <li>materiałoznawstwo tworzyw polimerowych.</li>
           </ul>
         </section>
         <!-- Our team section -->
@@ -151,7 +152,7 @@
             <span class="exp-desc">
               <h5>Przemysław Narowski</h5>
               <p>
-                Certified Moldex3D Professional&reg;, zwycięzca międzynarodowego
+                Doktor nauk technicznych, Certified Moldex3D Professional&reg;, zwycięzca międzynarodowego
                 konkursu "Moldex3D Global Innovation Talent Award 2016",
                 specjalista w dziedzinie komputerowego wspomagania procesów
                 przetwórstwa tworzyw sztucznych. Od ponad 10 lat gromadzi
@@ -239,12 +240,11 @@
             naszych usług są zawsze wycenianie indywidulanie w zależności od
             typu i ilości zleconych nam prac.
           </p>
-
           <p>
             Po zapoznaniu się z Państwa szczegółowymi wymaganiami, wystawiamy
             dokładną ofertę cenową.
           </p>
-          
+          <p>To nie jest oferta w rozumieniu kodeksu cywilnego, stanowi zaproszenie do zawarcia umowy</p>
           <button class="backspace">&#8592 Powrót</button>
         </section>
       
@@ -357,7 +357,7 @@
               </p>
             </span>
           </div>
-          <div class="expert-info">
+          <!-- <div class="expert-info">
             <div class="portrait" style="height: 80px">
               <img
                 src="./assets/img/tt.png"
@@ -374,7 +374,7 @@
                 Zajmuje się frezowaniem i toczeniem.
               </p>
             </span>
-          </div>
+          </div> -->
           <div class="expert-info">
             <div class="portrait" style="height: 100px">
               <img
@@ -399,7 +399,7 @@
               </p>
             </span>
           </div>
-          <div class="expert-info">
+          <!-- <div class="expert-info">
             <div class="portrait" style="height: 71.5px">
               <img
                 src="./assets/img/dopak.png"
@@ -419,7 +419,7 @@
                 kompozytową.
               </p>
             </span>
-          </div>
+          </div> -->
           
           <button class="backspace">&#8592 Powrót</button>
         </section>
@@ -435,7 +435,7 @@
             <p>info@e-nodo.pl</p>
             <hr />
             <h5>Adres pocztowy</h5>
-            <p>ul. Jodłowa 14, 06-200 Maków Mazowiecki</p>
+            <p>ul. Wróblewskiego 25/213, 51-627 Wrocław</p>
             <hr />
           </div>
           
@@ -445,6 +445,9 @@
         <!-- Reference 1 -->
         <section class="hidden" id="ref1-section">
           <h2>POPRAWA WYTRZYMAŁOŚCI ZMĘCZENIOWEJ ELEMENTU SPRĘŻYSTEGO</h2>
+          <div class="fakeimg" style="height: 500px" id="VC-case">
+            <img src="./assets/img/vc-case.png" alt="VC Case" />
+          </div>
           <div class="info-tab">
           <hr>
           <h5>Klient</h5>
@@ -475,29 +478,32 @@
        
         <!-- Reference 2 -->
         <section class="hidden" id="ref2-section">
-          <h2>W OPRACOWANIU</h2>
+          <h2>ELIMINACJA WADY POWIERZCHNIOWEJ</h2>
+          <div class="fakeimg" style="height: 500px" id="VC-case">
+            <img src="./assets/img/ap-case.png" alt="Akces Plast Case" />
+          </div>
           <div class="info-tab">
           <hr>
           <h5>Klient</h5>
-          <p>...</p>
+          <p>Akces Plast PHU</p>
           <hr>
           <h5>Produkt</h5>
-          <p>...</p>
+          <p>uchwyt meblowy</p>
           <hr>
           <h5>Technika wytwarzania</h5>
           <p>wtryskiwanie tworzyw termoplastycznych</p>
           <hr>
           <h5>Opis problemu</h5>
-          <p>...</p>
+          <p>widoczne linie płynięcia w okolicy przewężki</p>
           <hr>
           <h5>Metoda analizy problemu</h5>
           <p>symulacje numeryczne wtryskiwania</p>
           <hr>
           <h5>Propozycja rozwiązania</h5>
-          <p>...</p>
+          <p>zmiana typu przewężki</p>
           <hr>
           <h5>Skutek wprowadzenia propozycji</h5>
-          <p>...</p>
+          <p>eliminacja wady powierzchniowej</p>
           <hr>
         </div>
         
@@ -535,10 +541,13 @@
         <!-- Reference 4 -->
         <section class="hidden" id="ref4-section">
           <h2>REDUKCJA WARTOŚĆI WYPACZENIA</h2>
+          <div class="fakeimg" style="height: 500px" id="DS-case">
+            <img src="./assets/img/ds-case.png" alt="Dr. Schneider Case" />
+          </div>
           <div class="info-tab">
           <hr>
           <h5>Klient</h5>
-          <p>międzynarodowa firma z branży automotive (nazwa utajniona)</p>
+          <p>Dr. Schneider Automotive Sp. z o. o.</p>
           <hr>
           <h5>Produkt</h5>
           <p>schowek pasażera</p>
@@ -715,20 +724,20 @@
     </div>
     <!-- Footer -->
     <div class="footer">
-      <a href="#" id="fb"
+      <!-- <a href="#" id="fb"
         ><img class="social-links" src="./assets/img/facebook.png"
       /></a>
       <a href="#" id="fb"
         ><img class="social-links" src="./assets/img/twitter.png"
-      /></a>
-      <a href="#" id="fb"
+      /></a> -->
+      <a href="https://www.linkedin.com/in/przemyslaw-narowski" id="linkedin"
         ><img class="social-links" src="./assets/img/in.png"
       /></a>
-      <a href="#" id="fb"
+      <!-- <a href="#" id="fb"
         ><img class="social-links" src="./assets/img/YT.png"
-      /></a>
+      /></a> -->
       <p class="copyright">
-        Copyright &copy; 2021 eNODO Przemysław Narowski. All rights reserved.
+        Copyright &copy; 2021 eNodo Przemysław Narowski. All rights reserved.
       </p>
     </div>
   </body>
